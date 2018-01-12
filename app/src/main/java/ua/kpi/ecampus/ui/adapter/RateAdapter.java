@@ -20,10 +20,7 @@ import ua.kpi.ecampus.model.Rating;
 /**
  * RateAdapter manages Rating data model and adapts it to
  * list, which is in RateTeacherActivity.
- * <p>
- * Created by Administrator on 08.06.2016.
- * //
- */
+ **/
 public class RateAdapter extends ArrayAdapter<Rating> {
 
     private List<Rating> mData = new ArrayList<>();

@@ -75,19 +75,19 @@ public class BulletinContentActivity extends BaseActivity implements
             return;
 
         TextView textView;
-        textView = (TextView) findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_theme);
+        textView = findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_theme);
         textView.setText(mBulletin.getSubject());
 
-        textView = (TextView) findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_text);
+        textView = findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_text);
         textView.setText(mBulletin.getText());
 
-        textView = (TextView) findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_start_date);
+        textView = findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_start_date);
         textView.setText(mBulletin.getDateStart());
 
-        textView = (TextView) findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_end_date);
+        textView = findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_end_date);
         textView.setText(mBulletin.getDateStop());
 
-        textView = (TextView) findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_author);
+        textView = findViewById(ua.kpi.ecampus.R.id.text_view_bulletin_author);
         textView.setText(mBulletin.getCreatorName());
     }
 }

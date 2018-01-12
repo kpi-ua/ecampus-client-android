@@ -1,4 +1,4 @@
-package com.kpi.campus.helper.action;
+package ua.kpi.ecampus.helper.action;
 /*
  * The MIT License (MIT)
  *

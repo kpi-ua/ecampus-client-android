@@ -1,4 +1,4 @@
-package com.kpi.campus.helper.action;
+package ua.kpi.ecampus.helper.action;
 
 import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;

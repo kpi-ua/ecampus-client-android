@@ -14,7 +14,7 @@ import ua.kpi.ecampus.database.table.TokenTable;
  */
 public class SqlHelper extends SQLiteOpenHelper {
 
-    public static final String CONTENT_AUTHORITY = "com.kpi.ua.kpi.ecampus.database.contentprovider";
+    public static final String CONTENT_AUTHORITY = "ua.kpi.ecampus.database.contentprovider";
 
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 

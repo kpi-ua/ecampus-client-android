@@ -1,14 +1,8 @@
 package ua.kpi.ecampus;
 
-/**
- * This class stores service constants of application.
- * <p>
- * Created by Administrator on 16.03.2016.
- */
 public class Config {
 
     public static final String LOG = "campus.kpi.ua";
-
     /**
      * Keys for intent
      */
@@ -17,13 +11,11 @@ public class Config {
     public static final String KEY_BULLETIN = "key_bulletin";
     public static final String KEY_TITLE = "key_title";
     public static final String KEY_TEACHER = "key_teacher";
-
     /**
      * Keys for SharedPreferences
      * Name of our shared preferences
      */
     public static final String SHARED_PREF_NAME = "campusapp";
-
     /**
      * Used to store the token of current logged in user
      */
@@ -32,7 +24,6 @@ public class Config {
      * Used to store the token expiration time
      */
     public static final String EXPIRES_IN_SHARED_PREF = "token_expires_in";
-
     /**
      * Stores the boolean in SharedPreferences to track user is logged in or not
      */
@@ -47,7 +38,6 @@ public class Config {
     public static final String USER_SUBDIVISION = "user_subdivision";
 
     public static final String USER_IS_BB_MODERATOR = "user_is_moderator";
-
     /**
      * Request code for startActivityForResult method
      */

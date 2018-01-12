@@ -1,6 +1,5 @@
 package ua.kpi.ecampus.api.service;
 
-
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Interceptor;
@@ -9,7 +8,6 @@ import okhttp3.Request;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 
 /**
  * This class creates a new REST client with a given API_Endpoint.
@@ -53,7 +51,6 @@ public class ServiceCreator {
         return chain.proceed(request);
     };
 
-
     /**
      * Creates a retrofit service from an arbitrary class
      *
@@ -68,7 +65,6 @@ public class ServiceCreator {
 
     /**
      * Creates test service. For unit testing purposes.
-     *
      * @param url endpoint
      * @param serviceClass Java interface of the retrofit service
      * @param <S>

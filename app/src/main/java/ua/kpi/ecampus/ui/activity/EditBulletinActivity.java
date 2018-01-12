@@ -137,15 +137,15 @@ public class EditBulletinActivity extends SaveBulletinActivity implements
         mEndDate.setText(mCurrentBulletin.getDateStop());
         mCreateDate.setText(mCurrentBulletin.getDateCreate());
 
-        TextView tv = (TextView) findViewById(R.id.text_view_actuality_value);
+        TextView tv = findViewById(R.id.text_view_actuality_value);
         if (mCurrentBulletin.getActuality())
             tv.setText(R.string.yes);
         else
             tv.setText(R.string.no);
-        tv = (TextView) findViewById(R.id
+        tv = findViewById(R.id
                 .text_view_change_actuality_date_value);
         tv.setText(mCurrentBulletin.getDateCreate());
-        tv = (TextView) findViewById(R.id.text_view_author_name);
+        tv = findViewById(R.id.text_view_author_name);
         tv.setText(User.getInstance().name);
 
         mPresenter.loadRecipients();

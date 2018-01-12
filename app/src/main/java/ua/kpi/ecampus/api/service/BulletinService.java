@@ -16,11 +16,6 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 import rx.Observable;
 
-/**
- * Contains list of APIs related to BulletinBoard.
- *
- * Created by Administrator on 21.03.2016.
- */
 public interface BulletinService {
 
     @GET("/board/all")

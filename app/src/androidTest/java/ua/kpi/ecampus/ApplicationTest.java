@@ -1,4 +1,4 @@
-package com.kpi.campus;
+package ua.kpi.ecampus;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

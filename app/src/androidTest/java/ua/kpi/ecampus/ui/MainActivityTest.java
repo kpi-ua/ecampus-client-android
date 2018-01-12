@@ -1,5 +1,4 @@
-package com.kpi.campus.ui;
-
+package ua.kpi.ecampus.ui;
 
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -13,10 +12,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import ua.kpi.ecampus.R;
-import ua.kpi.ecampus.model.Subsystem;
-import ua.kpi.ecampus.ui.activity.MainActivity;
-
 import static android.support.test.espresso.Espresso.onData;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -28,15 +23,14 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.kpi.campus.helper.action.OrientationChangeAction.orientationLandscape;
-import static com.kpi.campus.helper.action.OrientationChangeAction.orientationPortrait;
+import static ua.kpi.ecampus.helper.action.OrientationChangeAction.orientationLandscape;
+import static ua.kpi.ecampus.helper.action.OrientationChangeAction.orientationPortrait;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
 
 /**
  * Tests to verify that the behavior of {@link MainActivity} is correct.
- * Created by Administrator on 01.03.2016.
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest

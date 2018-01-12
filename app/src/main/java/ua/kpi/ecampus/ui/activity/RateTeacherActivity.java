@@ -77,7 +77,7 @@ public class RateTeacherActivity extends BaseActivity {
     private void setViews() {
         setToolbar();
         setListView();
-        TextView tv = (TextView) findViewById(R.id.tv_teacher_name);
+        TextView tv = findViewById(R.id.tv_teacher_name);
         tv.setText(mTeacher.getTeacherName());
     }
 

@@ -16,6 +16,6 @@ public class CollectionValidator {
     }
 
     public static boolean isEmpty(Collection collection) {
-        return (collection.size() == 0) ? true : false;
+        return collection.size() == 0;
     }
 }

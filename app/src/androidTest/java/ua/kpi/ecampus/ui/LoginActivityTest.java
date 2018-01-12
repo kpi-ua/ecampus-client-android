@@ -1,4 +1,4 @@
-package com.kpi.campus.ui;
+package ua.kpi.ecampus.ui;
 
 import android.support.test.espresso.intent.rule.IntentsTestRule;
 import android.support.test.runner.AndroidJUnit4;
@@ -11,9 +11,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import ua.kpi.ecampus.R;
-import ua.kpi.ecampus.ui.activity.LoginActivity;
-
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
@@ -23,12 +20,11 @@ import static android.support.test.espresso.intent.matcher.ComponentNameMatchers
 import static android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent;
 import static android.support.test.espresso.matcher.ViewMatchers.isRoot;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static com.kpi.campus.helper.action.OrientationChangeAction.orientationLandscape;
-import static com.kpi.campus.helper.action.OrientationChangeAction.orientationPortrait;
+import static ua.kpi.ecampus.helper.action.OrientationChangeAction.orientationLandscape;
+import static ua.kpi.ecampus.helper.action.OrientationChangeAction.orientationPortrait;
 
 /**
  * Tests to verify that the behavior of {@link LoginActivityTest} is correct.
- * Created by Administrator on 29.02.2016.
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest

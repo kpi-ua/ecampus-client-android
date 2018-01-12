@@ -42,14 +42,10 @@ import ua.kpi.ecampus.util.pagination.PaginationTool;
 public class BulletinBoardActivity extends BaseActivity implements
         BulletinBoardPresenter.IView {
 
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
-    @Bind(R.id.tab_layout)
-    TabLayout mTabLayout;
-    @Bind(android.R.id.list)
-    ExtendedRecyclerView mRecyclerView;
-    @Bind(R.id.progress_bar_bulletin)
-    ProgressBar mProgressLoader;
+    @Bind(R.id.toolbar) Toolbar mToolbar;
+    @Bind(R.id.tab_layout) TabLayout mTabLayout;
+    @Bind(android.R.id.list) ExtendedRecyclerView mRecyclerView;
+    @Bind(R.id.progress_bar_bulletin) ProgressBar mProgressLoader;
     @Inject
     BulletinBoardPresenter mPresenter;
     private PagingRecyclerAdapter mAdapter;
