@@ -57,7 +57,7 @@
             android:gravity="center"
             android:text="Період показу"
             android:textColor="@color/colorSecondaryText"
-            android:textSize="11sp"
+            android:textSize="13sp"
             app:compoundDrawableHeight="24dp"
             app:compoundDrawableWidth="24dp" />
 
@@ -72,7 +72,7 @@
             android:layout_toRightOf="@id/bulletin_period"
             android:text="15.01.2016"
             android:textColor="@color/colorSecondaryText"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/text_view_bulletin_end_date"
@@ -85,7 +85,7 @@
             android:layout_toRightOf="@id/text_view_bulletin_start_date"
             android:text="20.01.2016"
             android:textColor="@color/colorSecondaryText"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
         <ua.kpi.ecampus.ui.view.TextViewDrawableSize
             android:id="@+id/bulletin_author"
@@ -100,7 +100,7 @@
             android:gravity="center"
             android:text="Публікатор"
             android:textColor="@color/colorSecondaryText"
-            android:textSize="11sp"
+            android:textSize="13sp"
             app:compoundDrawableHeight="24dp"
             app:compoundDrawableWidth="24dp" />
 
@@ -115,8 +115,7 @@
             android:layout_toRightOf="@id/bulletin_author"
             android:text="Іваненко І.І."
             android:textColor="@color/colorSecondaryText"
-            android:textSize="10sp" />
-
+            android:textSize="12sp" />
 
     </RelativeLayout>
 </ScrollView>

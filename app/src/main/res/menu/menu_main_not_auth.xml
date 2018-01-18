@@ -12,7 +12,6 @@
         android:icon="@mipmap/login"
         />
 
-
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"

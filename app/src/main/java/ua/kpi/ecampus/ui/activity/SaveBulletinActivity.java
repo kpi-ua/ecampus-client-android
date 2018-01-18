@@ -121,7 +121,7 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
 
     @Override
     public void updateBadgeCounter(int count) {
-        TextView tvCounter = (TextView) findViewById(R.id.tv_badge_counter);
+        TextView tvCounter = findViewById(R.id.tv_badge_counter);
         tvCounter.setText(Integer.toString(count));
     }
 
@@ -163,8 +163,8 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
     }
     @OnClick(R.id.btn_more_information)
     public void onMoreInformation(){
-        hideShowMoreInformation((FrameLayout) findViewById(R.id.attribute_input_start_period));
-        hideShowMoreInformation((FrameLayout) findViewById(R.id.attribute_input_end_period));
+        hideShowMoreInformation(findViewById(R.id.attribute_input_start_period));
+        hideShowMoreInformation(findViewById(R.id.attribute_input_end_period));
     }
 
     private void hideShowMoreInformation(FrameLayout frameLayout){
@@ -221,7 +221,7 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
             public void onItemSelected(AdapterView<?> parent, View view, int
                     position, long id) {
                 Item item = (Item) parent.getItemAtPosition(position);
-                mPresenter.loadGroupsOfSubdivision(item.getId().toString());
+                //mPresenter.loadGroupsOfSubdivision(item.getId().toString());
             }
 
             @Override
@@ -232,7 +232,7 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
     }
 
     protected void setRadioGroup() {
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id
+        RadioGroup radioGroup = findViewById(R.id
                 .radio_group_recipient);
         radioGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> {
             switch (checkedId) {
@@ -271,7 +271,7 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
     }
 
     protected void setRecyclerView(View parentView) {
-        RecyclerView recView = (RecyclerView) parentView.findViewById(R.id
+        RecyclerView recView = parentView.findViewById(R.id
                 .recycler_view_buffer_recipients);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -287,13 +287,13 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
             isValid = false;
         }
         return (isValid &
-                validateField((TextInputLayout) findViewById(R.id
+                validateField(findViewById(R.id
                         .input_theme), mSubject.getText().toString()) &
-                validateField((TextInputLayout) findViewById(R.id
+                validateField(findViewById(R.id
                         .input_text), mText.getText().toString()) &
-                validateField((TextInputLayout) findViewById(R.id
+                validateField(findViewById(R.id
                         .input_start_period), mStartDate.getText().toString())
-                & validateField((TextInputLayout) findViewById(R.id
+                & validateField(findViewById(R.id
                 .input_end_period), mEndDate.getText().toString())
         );
     }

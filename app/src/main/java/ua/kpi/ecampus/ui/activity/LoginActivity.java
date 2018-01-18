@@ -153,14 +153,14 @@ public class LoginActivity extends BaseActivity implements LoginPresenter
      */
     private boolean validateInput(String inputLogin, String inputPassword) {
         boolean isValid = true;
-        TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.input_login);
+        TextInputLayout inputLayout = findViewById(R.id.input_login);
         if (inputLogin.isEmpty()) {
             setErrorInput(inputLayout, getString(R.string.login_is_required));
             isValid = false;
         } else {
             setErrorInput(inputLayout, null);
         }
-        inputLayout = (TextInputLayout) findViewById(R.id.input_password);
+        inputLayout = findViewById(R.id.input_password);
         if (inputLogin.isEmpty()) {
             setErrorInput(inputLayout, getString(R.string.password_is_required));
             isValid = false;

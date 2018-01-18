@@ -8,11 +8,6 @@ import java.util.List;
 
 import dagger.ObjectGraph;
 
-/**
- * Android Application extension created to get the control of the application lifecycle.
- *
- * Created by Administrator on 26.01.2016.
- */
 public class CampusApplication extends Application {
 
     private ObjectGraph objectGraph;

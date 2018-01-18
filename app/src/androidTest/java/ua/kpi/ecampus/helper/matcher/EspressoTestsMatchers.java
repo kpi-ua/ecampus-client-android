@@ -1,12 +1,9 @@
-package com.kpi.campus.helper.matcher;
+package ua.kpi.ecampus.helper.matcher;
 
 import android.view.View;
 
 import org.hamcrest.Matcher;
 
-/**
- * Created by Administrator on 03.03.2016.
- */
 public class EspressoTestsMatchers {
 
     public static Matcher<View> withDrawable(final int resourceId) {

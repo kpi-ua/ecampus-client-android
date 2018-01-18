@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     package="ua.kpi.ecampus"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="5"
-    android:versionName="1.0.5">
-
-    <uses-sdk
-        android:minSdkVersion="17"
-        android:targetSdkVersion="22"/>
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name="ua.kpi.ecampus.CampusApplication"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher_dark"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name="ua.kpi.ecampus.ui.activity.MainNotAuthActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name="ua.kpi.ecampus.ui.activity.LoginActivity"
             android:screenOrientation="portrait"
@@ -36,11 +32,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity
             android:name="ua.kpi.ecampus.ui.activity.BulletinBoardActivity"
             android:parentActivityName="ua.kpi.ecampus.ui.activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name="ua.kpi.ecampus.ui.activity.BulletinContentActivity"
             android:parentActivityName="ua.kpi.ecampus.ui.activity.BulletinBoardActivity"
@@ -49,7 +47,7 @@
 
         <provider
             android:name="ua.kpi.ecampus.database.ApiContentProvider"
-            android:authorities="com.kpi.campus.database.contentprovider"
+            android:authorities="ua.kpi.ecampus.database.contentprovider"
             android:exported="false"/>
 
         <activity
@@ -57,35 +55,32 @@
             android:parentActivityName="ua.kpi.ecampus.ui.activity.BulletinBoardModeratorActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden">
-
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
 
         <activity
             android:name="ua.kpi.ecampus.ui.activity.BulletinBoardModeratorActivity"
             android:parentActivityName="ua.kpi.ecampus.ui.activity.BulletinBoardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name="ua.kpi.ecampus.ui.activity.EditBulletinActivity"
             android:parentActivityName="ua.kpi.ecampus.ui.activity.BulletinBoardModeratorActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden"/>
+
         <activity
             android:name="ua.kpi.ecampus.ui.activity.VotingStudentActivity"
             android:parentActivityName="ua.kpi.ecampus.ui.activity.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
 
-
-
         <activity
             android:name="ua.kpi.ecampus.ui.activity.RateTeacherActivity"
             android:parentActivityName="ua.kpi.ecampus.ui.activity.VotingStudentActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"/>
 
-        </activity>
     </application>
 </manifest>

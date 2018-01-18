@@ -23,6 +23,6 @@ public class TermPredicates {
                                                    predicate) {
         return Stream.of(bulletins)
                 .filter(predicate)
-                .collect(Collectors.<VoteTeacher>toList());
+                .collect(Collectors.toList());
     }
 }

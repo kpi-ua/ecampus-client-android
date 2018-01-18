@@ -147,13 +147,13 @@ public class AddBulletinActivity extends SaveBulletinActivity implements
 
     private void setInitialViewValues() {
         User user = User.getInstance();
-        TextView tv = (TextView) findViewById(ua.kpi.ecampus.R.id.text_view_author_name);
+        TextView tv = findViewById(ua.kpi.ecampus.R.id.text_view_author_name);
         tv.setText(user.name);
-        tv = (TextView) findViewById(ua.kpi.ecampus.R.id.text_view_actuality_value);
+        tv = findViewById(ua.kpi.ecampus.R.id.text_view_actuality_value);
         tv.setText(ua.kpi.ecampus.R.string.yes);
         String currentDate = DateUtil.getCurrentDate(DateUtil.FORMAT);
         mCreateDate.setText(currentDate);
-        tv = (TextView) findViewById(ua.kpi.ecampus.R.id
+        tv = findViewById(ua.kpi.ecampus.R.id
                 .text_view_change_actuality_date_value);
         tv.setText(currentDate);
     }

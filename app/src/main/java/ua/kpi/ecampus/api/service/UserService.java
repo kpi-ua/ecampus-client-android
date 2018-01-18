@@ -8,8 +8,6 @@ import rx.Observable;
 
 /**
  * Contains list of APIs related to User.
- * <p>
- * Created by Administrator on 17.03.2016.
  */
 public interface UserService {
 

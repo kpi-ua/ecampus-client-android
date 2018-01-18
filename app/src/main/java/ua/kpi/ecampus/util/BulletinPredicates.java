@@ -45,7 +45,7 @@ public class BulletinPredicates {
 
     public static List<Integer> getIdsCollection(List<Item> items) {
         return Stream.of(items).map(Item::getId).collect
-                (Collectors.<Integer>toList());
+                (Collectors.toList());
     }
 
     public static List<Bulletin> filterBulletins(Collection<Bulletin> bulletins,
@@ -53,6 +53,6 @@ public class BulletinPredicates {
                                                          predicate) {
         return Stream.of(bulletins)
                 .filter(predicate)
-                .collect(Collectors.<Bulletin>toList());
+                .collect(Collectors.toList());
     }
 }

@@ -1,4 +1,4 @@
-package com.kpi.campus.helper.matcher;
+package ua.kpi.ecampus.helper.matcher;
 
 import android.content.Context;
 import android.content.res.Resources;

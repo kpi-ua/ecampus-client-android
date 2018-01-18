@@ -27,10 +27,8 @@ import butterknife.Bind;
 public class MainNotAuthActivity extends BaseActivity implements
         MainNotAuthPresenter.IView {
 
-    @Bind(ua.kpi.ecampus.R.id.toolbar)
-    Toolbar mToolbar;
-    @Bind(ua.kpi.ecampus.R.id.recycler_view_subsystems)
-    RecyclerView mRecyclerView;
+    @Bind(ua.kpi.ecampus.R.id.toolbar) Toolbar mToolbar;
+    @Bind(ua.kpi.ecampus.R.id.recycler_view_subsystems) RecyclerView mRecyclerView;
     @Inject
     MainNotAuthPresenter mPresenter;
 

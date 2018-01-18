@@ -58,7 +58,7 @@ public class ItemSpinnerAdapter extends ArrayAdapter<Item> {
         convertView = LayoutInflater.from(context).inflate
                 (dropdownLayoutId, parent,
                         false);
-        TextView textView = (TextView) convertView.findViewById(android.R.id
+        TextView textView = convertView.findViewById(android.R.id
                 .text1);
         textView.setTextColor(context.getResources().getColor(ua.kpi.ecampus.R.color
                 .colorTextDark));

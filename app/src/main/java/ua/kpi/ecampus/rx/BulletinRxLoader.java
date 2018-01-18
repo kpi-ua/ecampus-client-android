@@ -1,11 +1,14 @@
 package ua.kpi.ecampus.rx;
 
+import android.util.Log;
+
 import java.util.List;
 
 import retrofit2.adapter.rxjava.HttpException;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
+import ua.kpi.ecampus.Config;
 import ua.kpi.ecampus.api.service.BulletinService;
 import ua.kpi.ecampus.api.service.ServiceCreator;
 import ua.kpi.ecampus.model.Recipient;
@@ -38,7 +41,7 @@ public class BulletinRxLoader {
                         responseMsg -> mPresenter.onFinishRequest(200,
                                 responseMsg),
                         e -> {
-                            //Log.e(Config.LOG, e.getMessage());
+                            Log.e(Config.LOG, e.getMessage());
                             if (e instanceof HttpException)
                                 mPresenter.onFinishRequest(((HttpException)
                                         e).code(), e.getMessage());
@@ -93,7 +96,7 @@ public class BulletinRxLoader {
                         }
                 );
     }
-
+/**
     public void loadDescSubdivisions(String subdivisionId) {
         BulletinService service = ServiceCreator.createService
                 (BulletinService.class);
@@ -134,7 +137,7 @@ public class BulletinRxLoader {
                             //Log.e(Config.LOG, e.getMessage());
                         });
     }
-
+**/
     public void loadRecipients(String bulletinId) {
         BulletinService service = ServiceCreator.createService
                 (BulletinService.class);
