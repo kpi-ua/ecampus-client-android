@@ -10,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.GridView;
 
+import ua.kpi.ecampus.R;
 import ua.kpi.ecampus.di.UIModule;
 import ua.kpi.ecampus.model.Subsystem;
 import ua.kpi.ecampus.ui.adapter.GridSubsystemAdapter;
@@ -130,6 +131,6 @@ public class MainActivity extends BaseActivity implements MainPresenter.IView {
         //getSupportActionBar().setHomeButtonEnabled(true);
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
         //mToolbar.setNavigationIcon(R.mipmap.ic_action_menu);
-        getSupportActionBar().setTitle(ua.kpi.ecampus.R.string.activity_name_main);
+        getSupportActionBar().setTitle(R.string.activity_name_main);
     }
 }

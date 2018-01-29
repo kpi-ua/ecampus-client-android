@@ -1,4 +1,4 @@
-box: jacekmarchwicki/android:java7-r22-0-1
+box: jacekmarchwicki/android:java8-r25
 # Build definition
 build:
   # The steps that will be executed on build

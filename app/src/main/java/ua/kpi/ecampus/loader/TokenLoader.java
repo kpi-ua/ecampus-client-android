@@ -14,7 +14,6 @@ import java.io.IOException;
 import retrofit2.Call;
 import retrofit2.Response;
 
-
 /**
  * Loads Token data.
  * <p>
