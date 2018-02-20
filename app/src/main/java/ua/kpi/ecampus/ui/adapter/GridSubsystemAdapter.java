@@ -15,14 +15,12 @@ import ua.kpi.ecampus.util.CollectionValidator;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
  * GridSubsystemAdapter manages Subsystem data model and adapts it to
  * GridView, which is in MainActivity.
- * <p>
- * Created by Administrator on 01.02.2016.
  */
 public class GridSubsystemAdapter extends BaseAdapter {
     private List<Subsystem> mData = new ArrayList<>();
@@ -78,10 +76,8 @@ public class GridSubsystemAdapter extends BaseAdapter {
     }
 
     protected static class GridViewHolder {
-        @Bind(ua.kpi.ecampus.R.id.image_view_subsystem_logo)
-        ImageView viewIcon;
-        @Bind(ua.kpi.ecampus.R.id.text_view_subsystem_name)
-        TextView viewTitle;
+        @BindView(ua.kpi.ecampus.R.id.image_view_subsystem_logo) ImageView viewIcon;
+        @BindView(ua.kpi.ecampus.R.id.text_view_subsystem_name) TextView viewTitle;
 
         public GridViewHolder(View itemView) {
             ButterKnife.bind(this, itemView);

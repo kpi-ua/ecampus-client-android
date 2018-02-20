@@ -1,10 +1,10 @@
 package ua.kpi.ecampus.api.service;
 
-import com.squareup.okhttp.HttpUrl;
-import com.squareup.okhttp.mockwebserver.Dispatcher;
-import com.squareup.okhttp.mockwebserver.MockResponse;
-import com.squareup.okhttp.mockwebserver.MockWebServer;
-import com.squareup.okhttp.mockwebserver.RecordedRequest;
+import com.squareup.okhttp3.HttpUrl;
+import com.squareup.okhttp3.mockwebserver.Dispatcher;
+import com.squareup.okhttp3.mockwebserver.MockResponse;
+import com.squareup.okhttp3.mockwebserver.MockWebServer;
+import com.squareup.okhttp3.mockwebserver.RecordedRequest;
 
 import org.junit.After;
 import org.junit.Before;
@@ -21,9 +21,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-/**
- * Created by Administrator on 19.05.2016.
- */
 public class BulletinServiceTest extends BaseServiceTest {
 
     private MockWebServer server;

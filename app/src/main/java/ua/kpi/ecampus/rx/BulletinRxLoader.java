@@ -17,9 +17,6 @@ import ua.kpi.ecampus.model.pojo.Item;
 import ua.kpi.ecampus.model.pojo.User;
 import ua.kpi.ecampus.ui.presenter.SaveBulletinPresenter;
 
-/**
- * Created by Administrator on 13.04.2016.
- */
 public class BulletinRxLoader {
 
     private SaveBulletinPresenter mPresenter;
@@ -41,7 +38,7 @@ public class BulletinRxLoader {
                         responseMsg -> mPresenter.onFinishRequest(200,
                                 responseMsg),
                         e -> {
-                            Log.e(Config.LOG, e.getMessage());
+                            //Log.e(Config.LOG, e.getMessage());
                             if (e instanceof HttpException)
                                 mPresenter.onFinishRequest(((HttpException)
                                         e).code(), e.getMessage());
@@ -96,7 +93,7 @@ public class BulletinRxLoader {
                         }
                 );
     }
-/**
+
     public void loadDescSubdivisions(String subdivisionId) {
         BulletinService service = ServiceCreator.createService
                 (BulletinService.class);
@@ -137,7 +134,7 @@ public class BulletinRxLoader {
                             //Log.e(Config.LOG, e.getMessage());
                         });
     }
-**/
+
     public void loadRecipients(String bulletinId) {
         BulletinService service = ServiceCreator.createService
                 (BulletinService.class);

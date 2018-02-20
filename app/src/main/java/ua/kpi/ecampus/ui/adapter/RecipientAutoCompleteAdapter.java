@@ -18,8 +18,6 @@ import java.util.List;
  * Manage loading and storage complements.
  * Implements Filterable interface to capture user input AutoCompleteTextView
  * and pass it as a search term into a web service.
- *
- * Created by Administrator on 25.02.2016.
  */
 public class RecipientAutoCompleteAdapter extends BaseAdapter implements Filterable {
 

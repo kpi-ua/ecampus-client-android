@@ -5,8 +5,6 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Represent Recipient of bulletin entity.
- * <p>
- * Created by Administrator on 25.02.2016.
  */
 public class Recipient {
 
@@ -83,7 +81,7 @@ public class Recipient {
         if (studyGroupId != null ? !studyGroupId.equals(recipient.studyGroupId) : recipient.studyGroupId != null)
             return false;
         return !(studyGroupName != null ? !studyGroupName.equals(recipient.studyGroupName) : recipient.studyGroupName != null);
-
+        //return true;//test
     }
 
     @Override

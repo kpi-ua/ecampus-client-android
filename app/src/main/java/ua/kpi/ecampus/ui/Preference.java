@@ -21,8 +21,6 @@ import javax.inject.Inject;
 
 /**
  * Implement queries to SharedPrefernces.
- * <p>
- * Created by Administrator on 21.03.2016.
  */
 public class Preference {
 

@@ -10,9 +10,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-/**
- * Created by Administrator on 25.04.2016.
- */
 public class SaveBulletinPresenter extends BasePresenter {
     private IView mView;
     protected BulletinRxLoader mLoader;
@@ -25,7 +22,7 @@ public class SaveBulletinPresenter extends BasePresenter {
     @Override
     public void initializeViewComponent() {
         mView.setViewComponent();
-        //loadSpinnerAdapterData();
+        loadSpinnerAdapterData();
     }
 
     public void setView(IView view) {
@@ -38,7 +35,6 @@ public class SaveBulletinPresenter extends BasePresenter {
 
     public void onStartRequest(CudAction action) {
         mView.showProgressDialog();
-
         action.execute();
     }
 
@@ -46,11 +42,11 @@ public class SaveBulletinPresenter extends BasePresenter {
         mView.dismissProgressDialog();
         mView.showResponse(responseCode, responseMsg);
     }
-/*
+
     public void loadGroupsOfSubdivision(String subdivisionId) {
         mLoader.loadGroupsOf(subdivisionId);
     }
-*/
+
     public void setDescSubdivisions(List<Item> list) {
         mView.setSubdivisionAdapter(list);
     }
@@ -81,7 +77,7 @@ public class SaveBulletinPresenter extends BasePresenter {
         String id = mView.getBulletinId();
         mLoader.deleteBulletin(id);
     }
-/*
+
     private void loadSpinnerAdapterData() {
         User u = User.getInstance();
         List<Item> subdivisions = u.getSubdivision();
@@ -92,34 +88,23 @@ public class SaveBulletinPresenter extends BasePresenter {
         }
         mLoader.loadProfiles();
     }
-*/
+
     public void loadRecipients() {
         String bulId = mView.getBulletinId();
         mLoader.loadRecipients(bulId);
     }
 
-
     public interface IView {
         void setViewComponent();
-
         void showProgressDialog();
-
         void dismissProgressDialog();
-
         void showResponse(int code, String msg);
-
         void setSubdivisionAdapter(List<Item> list);
-
         void setProfileAdapter(List<Item> list);
-
         void setGroupAdapter(List<Item> list);
-
         void setRecipientsList(List<Recipient> list);
-
         void updateBadgeCounter(int count);
-
         Bulletin formBulletin();
-
         String getBulletinId();
     }
 }

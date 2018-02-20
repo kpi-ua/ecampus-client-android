@@ -15,7 +15,7 @@ import ua.kpi.ecampus.ui.presenter.SaveBulletinPresenter;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -23,8 +23,6 @@ import butterknife.ButterKnife;
  * group) and adapts it to RecyclerView, which is in New/Edit BulletinActivity.
  * This recycler view contains buffer list of recipients which have not added
  * to bulletin's recipient list yet.
- * <p>
- * Created by Administrator on 17.02.2016.
  */
 public class BulletinsRecipientAdapter extends RecyclerView
         .Adapter<BulletinsRecipientAdapter.ViewHolder> {
@@ -105,12 +103,9 @@ public class BulletinsRecipientAdapter extends RecyclerView
 
     protected class ViewHolder extends RecyclerView.ViewHolder {
 
-        @Bind(R.id.tv_where)
-        TextView tvWhere;
-        @Bind(R.id.tv_whom)
-        TextView tvWhom;
-        @Bind(R.id.button_delete_buffer_recipient)
-        ImageButton btnDelete;
+        @BindView(R.id.tv_where) TextView tvWhere;
+        @BindView(R.id.tv_whom) TextView tvWhom;
+        @BindView(R.id.button_delete_buffer_recipient) ImageButton btnDelete;
 
         public ViewHolder(View itemView) {
             super(itemView);

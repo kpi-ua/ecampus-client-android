@@ -13,7 +13,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import ua.kpi.ecampus.Config;
 import ua.kpi.ecampus.R;
@@ -29,12 +29,9 @@ import ua.kpi.ecampus.util.ToastUtil;
 public class LoginActivity extends BaseActivity implements LoginPresenter
         .IView, LoaderManager.LoaderCallbacks<BaseResponse> {
 
-    @Bind(R.id.edit_text_login)
-    EditText mLogin;
-    @Bind(R.id.edit_text_password)
-    EditText mPassword;
-    @Bind(R.id.button_login)
-    Button mBtnLogin;
+    @BindView(R.id.edit_text_login) EditText mLogin;
+    @BindView(R.id.edit_text_password) EditText mPassword;
+    @BindView(R.id.button_login) Button mBtnLogin;
     @Inject
     LoginPresenter mPresenter;
     private ProgressDialog mProgressDialog;
@@ -87,10 +84,10 @@ public class LoginActivity extends BaseActivity implements LoginPresenter
                             getApplicationContext());
                 break;
             case ERROR:
-                ToastUtil.showShortMessage(getString(R.string.no_internet),                                             getApplicationContext());
+                ToastUtil.showShortMessage(getString(R.string.no_internet),
+                        getApplicationContext());
                 break;
         }
-
     }
 
     @Override

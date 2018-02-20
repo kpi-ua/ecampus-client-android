@@ -12,8 +12,6 @@ import java.util.List;
 
 /**
  * Represents Bulletin entity.
- * <p>
- * Created by Administrator on 02.02.2016.
  */
 public class Bulletin implements Parcelable {
 
@@ -44,6 +42,12 @@ public class Bulletin implements Parcelable {
     @SerializedName("subdivisionName")
     @Expose
     private String subdivisionName;
+    @SerializedName("studyGroupId")
+    @Expose
+    private int studyGroupId;
+    @SerializedName("studyGroupName")
+    @Expose
+    private String studyGroupName;
     @SerializedName("dateCreate")
     @Expose
     private String dateCreate;
@@ -58,6 +62,7 @@ public class Bulletin implements Parcelable {
     private boolean actuality;
     @SerializedName("recipient")
     @Expose
+
     private List<Recipient> recipientList = new ArrayList<>();
 
     public Bulletin(String userId, String subject, String text, String
@@ -177,6 +182,20 @@ public class Bulletin implements Parcelable {
     }
 
     /**
+     * @return The studyGroupName
+     */
+    public String getstudyGroupName() {
+        return studyGroupName;
+    }
+
+    /**
+     * @param studyGroupName The studyGroupName
+     */
+    public void setstudyGroupName(String studyGroupName) {
+        this.studyGroupName = studyGroupName;
+    }
+
+    /**
      * @return The dateCreate
      */
     public String getDateCreate() {
@@ -291,6 +310,14 @@ public class Bulletin implements Parcelable {
 
     public void setSubdivisionId(int subdivisionId) {
         this.subdivisionId = subdivisionId;
+    }
+
+    public int getstudyGroupId() {
+        return studyGroupId;
+    }
+
+    public void setstudyGroupId(int studyGroupId) {
+        this.studyGroupId = studyGroupId;
     }
 
     public String getCreatorId() {

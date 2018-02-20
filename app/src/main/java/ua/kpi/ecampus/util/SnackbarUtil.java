@@ -5,8 +5,6 @@ import android.view.View;
 
 /**
  * SnackbarUtil contains utility methods related with the Snackbar class.
- *
- * Created by Administrator on 09.06.2016.
  */
 public class SnackbarUtil {
 

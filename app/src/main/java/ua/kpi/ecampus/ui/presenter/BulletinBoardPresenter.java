@@ -18,8 +18,6 @@ import javax.inject.Inject;
 
 /**
  * BulletinBoardPresenter created to manage BulletinBoardActivity.
- *
- * Created by Admin on 02.02.2016.
  */
 public class BulletinBoardPresenter extends BasePresenter {
 

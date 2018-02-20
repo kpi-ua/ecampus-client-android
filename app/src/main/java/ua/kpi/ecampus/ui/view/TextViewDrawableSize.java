@@ -7,14 +7,16 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.support.v7.widget.AppCompatTextView;
 import android.widget.TextView;
+
+import ua.kpi.ecampus.R;
 
 /**
  * Custom TextView to work with size of compound drawable through XML attribute.
- *
- * Created by Administrator on 24.02.2016.
+
  */
-public class TextViewDrawableSize extends TextView {
+public class TextViewDrawableSize extends AppCompatTextView {
 
     private int mDrawableWidth;
     private int mDrawableHeight;
@@ -33,19 +35,19 @@ public class TextViewDrawableSize extends TextView {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr, 0);
     }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public TextViewDrawableSize(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        init(context, attrs, defStyleAttr, defStyleRes);
-    }
-
+/*
+ *   @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+ *   public TextViewDrawableSize(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+ *       super(context, attrs, defStyleAttr, defStyleRes);
+ *       init(context, attrs, defStyleAttr, defStyleRes);
+ *   }
+*/
     private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        TypedArray array = context.obtainStyledAttributes(attrs, ua.kpi.ecampus.R.styleable.TextViewDrawableSize, defStyleAttr, defStyleRes);
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.TextViewDrawableSize, defStyleAttr, defStyleRes);
 
         try {
-            mDrawableWidth = array.getDimensionPixelSize(ua.kpi.ecampus.R.styleable.TextViewDrawableSize_compoundDrawableWidth, -1);
-            mDrawableHeight = array.getDimensionPixelSize(ua.kpi.ecampus.R.styleable.TextViewDrawableSize_compoundDrawableHeight, -1);
+            mDrawableWidth = array.getDimensionPixelSize(R.styleable.TextViewDrawableSize_compoundDrawableWidth, -1);
+            mDrawableHeight = array.getDimensionPixelSize(R.styleable.TextViewDrawableSize_compoundDrawableHeight, -1);
         } finally {
             array.recycle();
         }

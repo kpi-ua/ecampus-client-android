@@ -5,16 +5,15 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.view.View;
+import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.widget.AutoCompleteTextView;
 import android.widget.ProgressBar;
 
 /**
  * Custom implementation of AutoCompleteTextView. This class adds delay
  * between character entering and sent it to the server.
- * <p/>
- * Created by Administrator on 25.02.2016.
  */
-public class DelayAutoCompleteTextView extends AutoCompleteTextView {
+public class DelayAutoCompleteTextView extends AppCompatAutoCompleteTextView {
 
     private static final int MESSAGE_TEXT_CHANGED = 100;
     private static final int DEFAULT_AUTOCOMPLETE_DELAY = 1000;

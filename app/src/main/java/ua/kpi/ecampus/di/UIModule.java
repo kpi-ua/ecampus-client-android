@@ -10,13 +10,12 @@ import ua.kpi.ecampus.ui.activity.MainActivity;
 import ua.kpi.ecampus.ui.activity.MainNotAuthActivity;
 
 import dagger.Module;
-import ua.kpi.ecampus.ui.activity.RateTeacherActivity;
-import ua.kpi.ecampus.ui.activity.VotingStudentActivity;
+import ua.kpi.ecampus.ui.activity.VoteRateTeacherActivity;
+import ua.kpi.ecampus.ui.activity.VoteStudentActivity;
+import ua.kpi.ecampus.ui.fragment.VoteCurrentFragment;
 
 /**
  * Dagger module created to provide UI dependencies like presenters.
- * <p>
- * Created by Administrator on 28.01.2016.
  */
 @Module(complete = false,
         injects = {
@@ -28,9 +27,10 @@ import ua.kpi.ecampus.ui.activity.VotingStudentActivity;
                 AddBulletinActivity.class,
                 BulletinBoardModeratorActivity.class,
                 EditBulletinActivity.class,
-                VotingStudentActivity.class,
-                RateTeacherActivity.class
-
+                VoteStudentActivity.class,
+                VoteRateTeacherActivity.class,
+                VoteCurrentFragment.class
         })
+
 public final class UIModule {
 }

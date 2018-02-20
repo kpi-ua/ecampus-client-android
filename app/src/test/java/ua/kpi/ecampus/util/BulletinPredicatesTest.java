@@ -17,9 +17,6 @@ import static ua.kpi.ecampus.util.BulletinPredicates.isMatchesQuerySubject;
 import static ua.kpi.ecampus.util.BulletinPredicates.isMatchesSubdivision;
 import static ua.kpi.ecampus.util.BulletinPredicates.isNotExpired;
 
-/**
- * Created by Administrator on 19.05.2016.
- */
 public class BulletinPredicatesTest {
 
     private Collection<Bulletin> mData = new ArrayList<>();

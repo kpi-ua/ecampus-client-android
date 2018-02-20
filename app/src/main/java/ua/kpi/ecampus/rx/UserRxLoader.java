@@ -11,8 +11,6 @@ import ua.kpi.ecampus.ui.Preference;
 
 /**
  * Perform requests of the UserService class.
- *
- * Created by Administrator on 21.03.2016.
  */
 public class UserRxLoader {
 

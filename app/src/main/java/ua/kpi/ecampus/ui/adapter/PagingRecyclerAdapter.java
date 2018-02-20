@@ -14,15 +14,13 @@ import ua.kpi.ecampus.ui.view.OnItemClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Manages Bulletin data model and adapts it to RecyclerView, which is in
  * BulletinBoardActivity, BulletinBoardModeratorActivity..
- * <p>
- * Created by Administrator on 24.03.2016.
  */
 public class PagingRecyclerAdapter extends RecyclerView
         .Adapter<PagingRecyclerAdapter.ViewHolder> {
@@ -123,14 +121,10 @@ public class PagingRecyclerAdapter extends RecyclerView
 
     protected class ViewHolder extends RecyclerView.ViewHolder {
 
-        @Bind(ua.kpi.ecampus.R.id.text_view_bulletin_date)
-        TextView date;
-        @Bind(ua.kpi.ecampus.R.id.text_view_bulletin_theme)
-        TextView theme;
-        @Bind(ua.kpi.ecampus.R.id.text_view_bulletin_author)
-        TextView author;
-        @Bind(ua.kpi.ecampus.R.id.button_overflow)
-        ImageButton btnOverflow;
+        @BindView(ua.kpi.ecampus.R.id.text_view_bulletin_date) TextView date;
+        @BindView(ua.kpi.ecampus.R.id.text_view_bulletin_theme) TextView theme;
+        @BindView(ua.kpi.ecampus.R.id.text_view_bulletin_author) TextView author;
+        @BindView(ua.kpi.ecampus.R.id.button_overflow) ImageButton btnOverflow;
 
         public ViewHolder(View itemView) {
             super(itemView);

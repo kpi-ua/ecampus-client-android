@@ -8,7 +8,7 @@ import javax.inject.Inject;
 
 import ua.kpi.ecampus.model.Rating;
 import ua.kpi.ecampus.model.dao.IDataAccessObject;
-import ua.kpi.ecampus.model.dao.VotingDao;
+import ua.kpi.ecampus.model.dao.VoteDao;
 import ua.kpi.ecampus.model.pojo.Item;
 import ua.kpi.ecampus.model.pojo.VoteSet;
 import ua.kpi.ecampus.model.pojo.VoteTeacher;
@@ -16,18 +16,15 @@ import ua.kpi.ecampus.model.pojo.VoteTerm;
 import ua.kpi.ecampus.ui.Navigator;
 import ua.kpi.ecampus.util.DateUtil;
 
-/**
- * Created by Administrator on 01.06.2016.
- */
-public class VotingStudentPresenter extends BasePresenter {
+public class VoteStudentPresenter extends BasePresenter {
 
     private IView mView;
     private IDataAccessObject<VoteSet> mDataAccess;
     private Navigator mNavigator;
 
     @Inject
-    public VotingStudentPresenter(Navigator navigator) {
-        mDataAccess = new VotingDao();
+    public VoteStudentPresenter(Navigator navigator) {
+        mDataAccess = new VoteDao();
         mNavigator = navigator;
     }
 
@@ -115,7 +112,7 @@ public class VotingStudentPresenter extends BasePresenter {
     }
 
     public void onItemClick(Object item) {
-        mNavigator.startRatingActivity((VoteTeacher)item);
+        mNavigator.startVoteRatingActivity((VoteTeacher)item);
     }
 
     private boolean isVotePeriod(String endDate) {
@@ -125,11 +122,8 @@ public class VotingStudentPresenter extends BasePresenter {
 
     public interface IView {
         void setViewComponent();
-
         void setTermsSpinner(List<Item> terms);
-
         void setVoteInProgressAdapter(List<VoteTeacher> teachers);
-
         void setVoteEndedAdapter(List<VoteTeacher> teachers);
     }
 }

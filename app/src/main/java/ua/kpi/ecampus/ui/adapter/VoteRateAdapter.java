@@ -12,16 +12,16 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import ua.kpi.ecampus.R;
 import ua.kpi.ecampus.model.Rating;
 
 /**
- * RateAdapter manages Rating data model and adapts it to
- * list, which is in RateTeacherActivity.
+ * VoteRateAdapter manages Rating data model and adapts it to
+ * list, which is in VoteRateTeacherActivity.
  **/
-public class RateAdapter extends ArrayAdapter<Rating> {
+public class VoteRateAdapter extends ArrayAdapter<Rating> {
 
     private List<Rating> mData = new ArrayList<>();
     private Context mContext;
@@ -35,7 +35,7 @@ public class RateAdapter extends ArrayAdapter<Rating> {
         };
     }
 
-    public RateAdapter(Context context, int resource, List<Rating> objects) {
+    public VoteRateAdapter(Context context, int resource, List<Rating> objects) {
         super(context, resource, objects);
         mContext = context;
         mResourceId = resource;
@@ -86,10 +86,8 @@ public class RateAdapter extends ArrayAdapter<Rating> {
 
     protected class ViewHolder {
 
-        @Bind(R.id.tv_criterion)
-        TextView tvCriterion;
-        @Bind(R.id.rating_bar)
-        RatingBar ratingBar;
+        @BindView(R.id.tv_criterion) TextView tvCriterion;
+        @BindView(R.id.rating_bar) RatingBar ratingBar;
 
         public ViewHolder(View itemView) {
             ButterKnife.bind(this, itemView);

@@ -9,9 +9,6 @@ import java.util.List;
 
 import ua.kpi.ecampus.model.pojo.VoteTeacher;
 
-/**
- * Created by Administrator on 07.06.2016.
- */
 public class TermPredicates {
 
     public static Predicate<VoteTeacher> isMatchesId(Integer id) {

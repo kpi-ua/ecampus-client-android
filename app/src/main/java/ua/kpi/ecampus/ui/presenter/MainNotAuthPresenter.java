@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 
+import ua.kpi.ecampus.R;
 import ua.kpi.ecampus.model.Subsystem;
 import ua.kpi.ecampus.ui.Navigator;
 
@@ -14,8 +15,6 @@ import javax.inject.Inject;
 
 /**
  * MainNotAuthPresenter created to manage MainNotAuthActivity.
- *
- * Created by Administrator on 28.01.2016.
  */
 public class MainNotAuthPresenter extends BasePresenter {
 
@@ -52,11 +51,11 @@ public class MainNotAuthPresenter extends BasePresenter {
     }
 
     private String[] getSubsystemNames(Resources res) {
-        return res.getStringArray(ua.kpi.ecampus.R.array.partial_subsystem);
+        return res.getStringArray(R.array.partial_subsystem);
     }
 
     private TypedArray getSubsystemIcon(Resources res) {
-        return res.obtainTypedArray(ua.kpi.ecampus.R.array.partial_subsystem_image);
+        return res.obtainTypedArray(R.array.partial_subsystem_image);
     }
 
     private Resources getResources() {

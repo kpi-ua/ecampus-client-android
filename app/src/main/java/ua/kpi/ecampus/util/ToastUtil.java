@@ -5,8 +5,6 @@ import android.widget.Toast;
 
 /**
  * ToastUtil contains utility methods related with the Toast class.
- *
- * Created by Administrator on 09.02.2016.
  */
 public class ToastUtil {
 

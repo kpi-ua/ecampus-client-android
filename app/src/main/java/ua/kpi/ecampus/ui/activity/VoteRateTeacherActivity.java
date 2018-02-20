@@ -11,31 +11,26 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import ua.kpi.ecampus.Config;
 import ua.kpi.ecampus.R;
 import ua.kpi.ecampus.di.UIModule;
 import ua.kpi.ecampus.model.Rating;
 import ua.kpi.ecampus.model.pojo.VoteTeacher;
-import ua.kpi.ecampus.ui.adapter.RateAdapter;
+import ua.kpi.ecampus.ui.adapter.VoteRateAdapter;
 import ua.kpi.ecampus.util.SnackbarUtil;
 
-/**
- * Created by Administrator on 08.06.2016.
- */
-public class RateTeacherActivity extends BaseActivity {
+public class VoteRateTeacherActivity extends BaseActivity {
 
-    @Bind(R.id.toolbar)
-    Toolbar mToolbar;
-    @Bind(R.id.listview_rate)
-    ListView mList;
-    private RateAdapter mAdapter;
+    @BindView(R.id.toolbar) Toolbar mToolbar;
+    @BindView(R.id.listview_rate) ListView mList;
+    private VoteRateAdapter mAdapter;
     private VoteTeacher mTeacher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rate_teacher);
+        setContentView(R.layout.activity_vote_rate_teacher);
         mTeacher = getIntent().getParcelableExtra(Config.KEY_TEACHER);
         bindViews();
         setViews();
@@ -104,7 +99,7 @@ public class RateTeacherActivity extends BaseActivity {
     }
 
     private void setListView() {
-        mAdapter = new RateAdapter(this, R.layout.list_rating_item, setRatingList());
+        mAdapter = new VoteRateAdapter(this, R.layout.list_rating_item, setRatingList());
         mList.setAdapter(mAdapter);
     }
 

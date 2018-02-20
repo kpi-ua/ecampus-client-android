@@ -5,8 +5,6 @@ import java.util.List;
 /**
  * Represents the entity of current logged user.
  * POJO class for convenient GSON serialization.
- * <p>
- * Created by Administrator on 16.03.2016.
  */
 public class User {
 

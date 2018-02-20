@@ -16,8 +16,6 @@ import java.util.Locale;
 /**
  * DatePickerFragment hosts each date picker which provides controls for the
  * user to a date as ready-to-use dialogs.
- * <p>
- * Created by Admin on 12.02.2016.
  */
 public class DatePickerFragment extends DialogFragment implements
         DatePickerDialog.OnDateSetListener {

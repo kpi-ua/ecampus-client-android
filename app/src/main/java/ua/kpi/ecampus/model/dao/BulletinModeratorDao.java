@@ -19,9 +19,6 @@ import java.util.Set;
 
 import ua.kpi.ecampus.util.BulletinPredicates;
 
-/**
- * Created by Administrator on 28.03.2016.
- */
 public class BulletinModeratorDao implements IDataAccessObject<Bulletin> {
 
     /**

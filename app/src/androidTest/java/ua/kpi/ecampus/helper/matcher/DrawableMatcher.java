@@ -13,8 +13,6 @@ import org.hamcrest.TypeSafeMatcher;
 
 /**
  * Matcher that implements withDrawable
- *
- * Created by Administrator on 03.03.2016.
  */
 public class DrawableMatcher extends TypeSafeMatcher<View> {
 

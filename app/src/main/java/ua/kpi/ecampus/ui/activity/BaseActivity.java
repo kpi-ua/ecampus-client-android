@@ -14,8 +14,6 @@ import ua.kpi.ecampus.di.ActivityModule;
  * Base activity created to be extended by every activity class.
  * This class provides dependency injection configuration, ButterKnife
  * Android library configuration and some methods common to every activity.
- * <p>
- * Created by Administrator on 26.01.2016.
  */
 public abstract class BaseActivity extends AppCompatActivity {
 

@@ -13,8 +13,6 @@ import ua.kpi.ecampus.model.pojo.User;
 
 /**
  * This class responsible for producing responses for the BulletinBoard.
- * <p>
- * Created by Administrator on 24.03.2016.
  */
 public class BulletinResponseManager {
 
