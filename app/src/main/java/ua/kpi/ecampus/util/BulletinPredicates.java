@@ -11,28 +11,20 @@ import java.util.List;
 import ua.kpi.ecampus.model.pojo.Bulletin;
 import ua.kpi.ecampus.model.pojo.Item;
 
-/**
- * Created by Administrator on 29.03.2016.
- */
 public class BulletinPredicates {
 
     public static Predicate<Bulletin> isNotExpired(String date) {
         Date currentDate = DateUtil.convert(date);
         return p -> (currentDate != null && !currentDate.before(DateUtil.convert
-                (p.getDateStart()))) &&
-                !currentDate.after(DateUtil.convert(p.getDateStop()));
+                (p.getDateStart()))) && !currentDate.after(DateUtil.convert(p.getDateStop()));
     }
 
-    public static Predicate<Bulletin> isMatchesProfile(List<Integer>
-                                                               profileIds) {
-        return p -> Stream.of(profileIds).anyMatch(i -> i.equals(p
-                .getProfileId()));
+    public static Predicate<Bulletin> isMatchesProfile(List<Integer>profileIds) {
+        return p -> Stream.of(profileIds).anyMatch(i -> i.equals(p.getProfileId()));
     }
 
-    public static Predicate<Bulletin> isMatchesSubdivision(List<Integer>
-                                                                   subdiv) {
-        return p -> Stream.of(subdiv).anyMatch(i -> i.equals(p
-                .getSubdivisionId()));
+    public static Predicate<Bulletin> isMatchesSubdivision(List<Integer>subdiv) {
+        return p -> Stream.of(subdiv).anyMatch(i -> i.equals(p.getSubdivisionId()));
     }
 
     public static Predicate<Bulletin> isDeleted() {
@@ -44,15 +36,11 @@ public class BulletinPredicates {
     }
 
     public static List<Integer> getIdsCollection(List<Item> items) {
-        return Stream.of(items).map(Item::getId).collect
-                (Collectors.toList());
+        return Stream.of(items).map(Item::getId).collect(Collectors.toList());
     }
 
     public static List<Bulletin> filterBulletins(Collection<Bulletin> bulletins,
-                                                 Predicate<Bulletin>
-                                                         predicate) {
-        return Stream.of(bulletins)
-                .filter(predicate)
-                .collect(Collectors.toList());
+                                                 Predicate<Bulletin> predicate) {
+        return Stream.of(bulletins).filter(predicate).collect(Collectors.toList());
     }
 }

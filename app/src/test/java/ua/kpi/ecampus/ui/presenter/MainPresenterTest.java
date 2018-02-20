@@ -23,9 +23,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-/**
- * Created by Admin on 17.05.2016.
- */
 public class MainPresenterTest {
 
     private MainPresenter mPresenter;

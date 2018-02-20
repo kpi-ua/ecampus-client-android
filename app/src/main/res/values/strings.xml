@@ -57,6 +57,8 @@
     <string name="required_field">Обов\'язкове поле!</string>
     <string name="activity_name_voting">Голосування</string>
 
+    <string name="category_current">Поточне</string>
+    <string name="category_archive">Архiв</string>
     <string name="criterionCompetence">Компетентність в дисципліні, яку викладає</string>
     <string name="criterionExactingness">Вимогливість викладача</string>
     <string name="criterionTeaching">Вміння донести матеріал до студентів</string>
@@ -65,4 +67,5 @@
     <string name="criterionModernity">Використання засобів дистанційного спілкування (електронна пошта, Skype, соц.мережі)</string>
     <string name="activity_name_rate_teacher">Оцінка</string>
     <string name="rate_by_all_criteria">Будь-ласка, оцініть за всіма критеріями</string>
+
 </resources>

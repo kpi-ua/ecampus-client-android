@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import ua.kpi.ecampus.R;
 import ua.kpi.ecampus.model.Subsystem;
 import ua.kpi.ecampus.util.CollectionValidator;
 
@@ -20,8 +21,6 @@ import butterknife.ButterKnife;
 /**
  * SubsystemAdapter manages Subsystem data model and adapts it to
  * RecyclerView, which is in MainNotAuthActivity.
- * <p>
- * Created by Administrator on 28.01.2016.
  */
 public class SubsystemAdapter extends RecyclerView.Adapter<SubsystemAdapter
         .ViewHolder> {
@@ -42,9 +41,8 @@ public class SubsystemAdapter extends RecyclerView.Adapter<SubsystemAdapter
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(ua.kpi
-                .ecampus.R.layout
-                .recycler_item_subsystem, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout
+                        .recycler_item_subsystem, parent, false);
         return new ViewHolder(view);
     }
 
@@ -63,11 +61,8 @@ public class SubsystemAdapter extends RecyclerView.Adapter<SubsystemAdapter
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        @Bind(ua.kpi.ecampus.R.id.text_view_subsystem_name)
-        TextView name;
-
-        @Bind(ua.kpi.ecampus.R.id.image_view_subsystem_image)
-        ImageView image;
+        @Bind(R.id.text_view_subsystem_name) TextView name;
+        @Bind(R.id.image_view_subsystem_image) ImageView image;
 
         public ViewHolder(View itemView) {
             super(itemView);

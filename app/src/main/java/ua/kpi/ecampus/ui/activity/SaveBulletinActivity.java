@@ -2,11 +2,8 @@ package ua.kpi.ecampus.ui.activity;
 
 import android.app.ProgressDialog;
 import android.graphics.Point;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -19,7 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RadioButton;
@@ -44,42 +40,24 @@ import ua.kpi.ecampus.ui.fragment.DatePickerFragment;
 import ua.kpi.ecampus.ui.presenter.SaveBulletinPresenter;
 import ua.kpi.ecampus.util.ToastUtil;
 
-/**
- * Created by Administrator on 12.05.2016.
- */
 public abstract class SaveBulletinActivity extends BaseActivity implements
         SaveBulletinPresenter.IView {
 
-    @Bind(R.id.edit_text_bulletin_theme)
-    protected EditText mSubject;
-    @Bind(R.id.edit_text_bulletin_text)
-    protected EditText mText;
-    @Bind(R.id.toolbar)
-    protected Toolbar mToolbar;
-    @Bind(R.id.text_view_start_period)
-    protected EditText mStartDate;
-    @Bind(R.id.text_view_end_period)
-    protected EditText mEndDate;
-    @Bind(R.id.text_view_creation_date_value)
-    protected TextView mCreateDate;
-    @Bind(R.id.spinner_profile)
-    protected Spinner mSpinnerProfile;
-    @Bind(R.id.spinner_group)
-    protected Spinner mSpinnerGroup;
-    @Bind(R.id.spinner_subdivision)
-    protected Spinner mSpinnerSubdivision;
-    @Bind(R.id.layout_profile)
-    protected RelativeLayout mLayoutProfile;
-    @Bind(R.id.layout_group)
-    protected RelativeLayout mLayoutGroup;
-    @Bind(R.id.rb_all)
-    protected RadioButton mRbAll;
-    @Bind(R.id.rb_profile)
-    protected RadioButton mRbProfile;
-    @Bind(R.id.rb_group)
-    protected RadioButton mRbGroup;
-    @Bind(R.id.btn_more_information)
-    protected ImageButton mMoreInfoBtn;
+    @Bind(R.id.edit_text_bulletin_theme) protected EditText mSubject;
+    @Bind(R.id.edit_text_bulletin_text) protected EditText mText;
+    @Bind(R.id.toolbar) protected Toolbar mToolbar;
+    @Bind(R.id.text_view_start_period) protected EditText mStartDate;
+    @Bind(R.id.text_view_end_period) protected EditText mEndDate;
+    @Bind(R.id.text_view_creation_date_value) protected TextView mCreateDate;
+    @Bind(R.id.spinner_profile) protected Spinner mSpinnerProfile;
+    @Bind(R.id.spinner_group) protected Spinner mSpinnerGroup;
+    @Bind(R.id.spinner_subdivision) protected Spinner mSpinnerSubdivision;
+    @Bind(R.id.layout_profile) protected RelativeLayout mLayoutProfile;
+    @Bind(R.id.layout_group) protected RelativeLayout mLayoutGroup;
+    @Bind(R.id.rb_all) protected RadioButton mRbAll;
+    @Bind(R.id.rb_profile) protected RadioButton mRbProfile;
+    @Bind(R.id.rb_group) protected RadioButton mRbGroup;
+    @Bind(R.id.btn_more_information) protected ImageButton mMoreInfoBtn;
     @Inject
     protected SaveBulletinPresenter mPresenter;
 
@@ -194,34 +172,28 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
     }
 
     protected void setProfileSpinner(List<Item> list) {
-        ArrayAdapter<Item> adapter = new ItemSpinnerAdapter(this, R.layout
-                .spinner_item, R.layout.spinner_dropdown_item, list);
-        mSpinnerProfile.setAdapter(new NothingSelectedAdapter(
-                adapter,
-                R.layout.spinner_item_nothing_selected_profile,
-                this));
+        ArrayAdapter<Item> adapter = new ItemSpinnerAdapter(this,
+                R.layout.spinner_item, R.layout.spinner_dropdown_item, list);
+        mSpinnerProfile.setAdapter(new NothingSelectedAdapter(adapter,
+                R.layout.spinner_item_nothing_selected_profile,this));
     }
 
     protected void setGroupSpinner(List<Item> list) {
-        ArrayAdapter<Item> adapter = new ItemSpinnerAdapter(this, R.layout
-                .spinner_item, R.layout.spinner_dropdown_item, list);
-        mSpinnerGroup.setAdapter(new NothingSelectedAdapter(
-                adapter,
-                R.layout.spinner_item_nothing_selected_group,
-                this));
+        ArrayAdapter<Item> adapter = new ItemSpinnerAdapter(this,
+                R.layout.spinner_item, R.layout.spinner_dropdown_item, list);
+        mSpinnerGroup.setAdapter(new NothingSelectedAdapter(adapter,
+                R.layout.spinner_item_nothing_selected_group,this));
     }
 
     protected void setSubdivisionSpinner(List<Item> list) {
-        ArrayAdapter<Item> adapter = new ItemSpinnerAdapter(this, R.layout
-                .spinner_item, R.layout.spinner_dropdown_item, list);
+        ArrayAdapter<Item> adapter = new ItemSpinnerAdapter(this,
+                R.layout.spinner_item, R.layout.spinner_dropdown_item, list);
         mSpinnerSubdivision.setAdapter(adapter);
-        mSpinnerSubdivision.setOnItemSelectedListener(new AdapterView
-                .OnItemSelectedListener() {
+        mSpinnerSubdivision.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int
-                    position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Item item = (Item) parent.getItemAtPosition(position);
-                //mPresenter.loadGroupsOfSubdivision(item.getId().toString());
+                mPresenter.loadGroupsOfSubdivision(item.getId().toString());
             }
 
             @Override
@@ -232,26 +204,22 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
     }
 
     protected void setRadioGroup() {
-        RadioGroup radioGroup = findViewById(R.id
-                .radio_group_recipient);
+        RadioGroup radioGroup = findViewById(R.id.radio_group_recipient);
         radioGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> {
             switch (checkedId) {
                 case R.id.rb_all:
-                    setVisibility(View.VISIBLE, findViewById(R.id
-                            .image_view_subdiv), findViewById(R.id
-                            .spinner_subdivision));
+                    setVisibility(View.VISIBLE, findViewById(R.id.image_view_subdiv),
+                            findViewById(R.id.spinner_subdivision));
                     setVisibility(View.GONE, mLayoutProfile, mLayoutGroup);
                     break;
                 case R.id.rb_profile:
                     setVisibility(View.GONE, mLayoutGroup);
-                    setVisibility(View.VISIBLE, mLayoutProfile, findViewById
-                            (R.id.image_view_subdiv), findViewById(R.id
-                            .spinner_subdivision));
+                    setVisibility(View.VISIBLE, mLayoutProfile, findViewById(R.id.image_view_subdiv),
+                            findViewById(R.id.spinner_subdivision));
                     break;
                 case R.id.rb_group:
-                    setVisibility(View.GONE, mLayoutProfile, findViewById(R.id
-                            .image_view_subdiv), findViewById(R.id
-                            .spinner_subdivision));
+                    setVisibility(View.GONE, mLayoutProfile, findViewById(R.id.image_view_subdiv),
+                            findViewById(R.id.spinner_subdivision));
                     setVisibility(View.VISIBLE, mLayoutGroup);
                     break;
                 default:
@@ -271,8 +239,7 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
     }
 
     protected void setRecyclerView(View parentView) {
-        RecyclerView recView = parentView.findViewById(R.id
-                .recycler_view_buffer_recipients);
+        RecyclerView recView = parentView.findViewById(R.id.recycler_view_buffer_recipients);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recView.setLayoutManager(layoutManager);
@@ -282,19 +249,14 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
     protected boolean isValidInput() {
         boolean isValid = true;
         if (mAdapter.getItemCount() <= 0) {
-            ToastUtil.showShortMessage(getString(R.string
-                    .recipient_must_be_added), this);
+            ToastUtil.showShortMessage(getString(R.string.recipient_must_be_added), this);
             isValid = false;
         }
         return (isValid &
-                validateField(findViewById(R.id
-                        .input_theme), mSubject.getText().toString()) &
-                validateField(findViewById(R.id
-                        .input_text), mText.getText().toString()) &
-                validateField(findViewById(R.id
-                        .input_start_period), mStartDate.getText().toString())
-                & validateField(findViewById(R.id
-                .input_end_period), mEndDate.getText().toString())
+                validateField(findViewById(R.id.input_theme), mSubject.getText().toString()) &
+                validateField(findViewById(R.id.input_text), mText.getText().toString()) &
+                validateField(findViewById(R.id.input_start_period), mStartDate.getText().toString())
+                & validateField(findViewById(R.id.input_end_period), mEndDate.getText().toString())
         );
     }
 
@@ -323,13 +285,13 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
         } else if (mRbProfile.isChecked()) {
             Item profile = (Item) mSpinnerProfile.getSelectedItem();
             if (profile == null) return null;
-            r = new Recipient(subdivId, subdivName, Integer.toString(profile
-                    .getId()), profile.getName(), null, null);
+            r = new Recipient(subdivId, subdivName, Integer.toString(profile.getId()),
+                    profile.getName(), null, null);
         } else if (mRbGroup.isChecked()) {
             Item group = (Item) mSpinnerGroup.getSelectedItem();
             if (group == null) return null;
-            r = new Recipient(null, null, null, null, Integer
-                    .toString(group.getId()), group.getName());
+            r = new Recipient(null, null, null, null,
+                    Integer.toString(group.getId()), group.getName());
         }
         return r;
     }
@@ -344,5 +306,4 @@ public abstract class SaveBulletinActivity extends BaseActivity implements
         }
         return true;
     }
-
 }

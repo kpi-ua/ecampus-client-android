@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 
+import ua.kpi.ecampus.R;
 import ua.kpi.ecampus.model.Subsystem;
 import ua.kpi.ecampus.model.pojo.User;
 import ua.kpi.ecampus.ui.Navigator;
@@ -21,11 +22,8 @@ import ua.kpi.ecampus.ui.Navigator;
 import ua.kpi.ecampus.ui.Preference;
 import ua.kpi.ecampus.util.BulletinPredicates;
 
-
 /**
  * MainPresenter created to manage MainActivity.
- * <p>
- * Created by Administrator on 01.02.2016.
  */
 public class MainPresenter extends BasePresenter {
 
@@ -92,7 +90,6 @@ public class MainPresenter extends BasePresenter {
 
     /**
      * Get list of ua.kpi.ecampus subsystems.
-     *
      * @return subsystems
      */
     public List<Subsystem> getData() {
@@ -123,11 +120,11 @@ public class MainPresenter extends BasePresenter {
     }
 
     private String[] getSubsystemNames(Resources res) {
-        return res.getStringArray(ua.kpi.ecampus.R.array.full_subsystem);
+        return res.getStringArray(R.array.full_subsystem);
     }
 
     private TypedArray getSubsystemIcon(Resources res) {
-        return res.obtainTypedArray(ua.kpi.ecampus.R.array.full_subsystem_image);
+        return res.obtainTypedArray(R.array.full_subsystem_image);
     }
 
     private Resources getResources() {

@@ -11,8 +11,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * This class creates a new REST client with a given API_Endpoint.
- * <p>
- * Created by Administrator on 08.02.2016.
  */
 public class ServiceCreator {
 

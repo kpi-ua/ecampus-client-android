@@ -21,8 +21,6 @@ import butterknife.OnClick;
 /**
  * Manages Bulletin data model and adapts it to RecyclerView, which is in
  * BulletinBoardActivity, BulletinBoardModeratorActivity..
- * <p>
- * Created by Administrator on 24.03.2016.
  */
 public class PagingRecyclerAdapter extends RecyclerView
         .Adapter<PagingRecyclerAdapter.ViewHolder> {

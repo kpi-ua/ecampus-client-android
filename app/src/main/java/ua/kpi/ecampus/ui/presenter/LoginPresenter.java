@@ -16,8 +16,6 @@ import javax.inject.Inject;
 
 /**
  * LoginPresenter created to manage LoginActivity.
- * <p>
- * Created by Administrator on 29.01.2016.
  */
 public class LoginPresenter extends BasePresenter {
 
@@ -25,7 +23,6 @@ public class LoginPresenter extends BasePresenter {
     private Navigator mNavigator;
     private Preference mPreference;
     private UserRxLoader mLoader;
-
 
     @Inject
     public LoginPresenter(Navigator navigator, Preference preference) {

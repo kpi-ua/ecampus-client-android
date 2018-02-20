@@ -1,15 +1,11 @@
 package ua.kpi.ecampus.model.dao;
 
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
 import ua.kpi.ecampus.model.pojo.VoteSet;
 
-/**
- * Created by Administrator on 01.06.2016.
- */
 public class VotingDao implements IDataAccessObject<VoteSet> {
 
     private List<VoteSet> mVoting = new ArrayList<>();

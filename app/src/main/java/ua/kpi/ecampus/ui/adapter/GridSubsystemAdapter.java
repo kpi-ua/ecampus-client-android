@@ -21,8 +21,6 @@ import butterknife.ButterKnife;
 /**
  * GridSubsystemAdapter manages Subsystem data model and adapts it to
  * GridView, which is in MainActivity.
- * <p>
- * Created by Administrator on 01.02.2016.
  */
 public class GridSubsystemAdapter extends BaseAdapter {
     private List<Subsystem> mData = new ArrayList<>();

@@ -9,7 +9,6 @@ import java.io.InputStream;
 
 /**
  * Read JSON data from file.
- * Created by Admin on 18.05.2016.
  */
 public class JsonReader {
 

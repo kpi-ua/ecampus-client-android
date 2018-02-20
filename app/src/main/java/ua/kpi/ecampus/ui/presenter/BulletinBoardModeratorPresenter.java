@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 
+import ua.kpi.ecampus.R;
 import ua.kpi.ecampus.model.dao.BulletinModeratorDao;
 import ua.kpi.ecampus.model.dao.IDataAccessObject;
 import ua.kpi.ecampus.model.pojo.Bulletin;
@@ -19,8 +20,6 @@ import ua.kpi.ecampus.util.BulletinPredicates;
 
 /**
  * BulletinBoardModeratorPresenter created to manage BulletinBoardModeratorActivity.
- * <p>
- * Created by Administrator on 19.02.2016.
  */
 public class BulletinBoardModeratorPresenter extends BasePresenter {
     private IView mView;
@@ -55,7 +54,7 @@ public class BulletinBoardModeratorPresenter extends BasePresenter {
      */
     public TypedArray getTabsIcon() {
         Resources r = mContext.getResources();
-        return r.obtainTypedArray(ua.kpi.ecampus.R.array.bulletin_board_moderator_tab_icon);
+        return r.obtainTypedArray(R.array.bulletin_board_moderator_tab_icon);
     }
 
     /**

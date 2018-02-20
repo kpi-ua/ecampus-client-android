@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="ua.kpi.ecampus.ui.activity.VotingStudentActivity">
-
-    <include layout="@layout/toolbar"/>
+    tools:context="ua.kpi.ecampus.ui.activity.VoteStudentActivity">
 
     <ua.kpi.ecampus.ui.view.TextViewDrawableSize
         style="@style/Margin"
@@ -23,7 +20,7 @@
         android:textSize="16sp"
         app:compoundDrawableHeight="28dp"
         app:compoundDrawableWidth="28dp"/>
-    
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -34,14 +31,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="8dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""/>
-
 
     </FrameLayout>
 

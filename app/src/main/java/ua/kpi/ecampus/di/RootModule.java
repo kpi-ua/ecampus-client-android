@@ -11,8 +11,6 @@ import dagger.Provides;
 /**
  * Dagger module created to work as junction of every module with an
  * application scope.
- * <p>
- * Created by Administrator on 26.01.2016.
  */
 @Module(injects = {CampusApplication.class}, library = true)
 public final class RootModule {

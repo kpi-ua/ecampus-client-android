@@ -12,8 +12,6 @@ import java.util.List;
 
 /**
  * Represents Bulletin entity.
- * <p>
- * Created by Administrator on 02.02.2016.
  */
 public class Bulletin implements Parcelable {
 

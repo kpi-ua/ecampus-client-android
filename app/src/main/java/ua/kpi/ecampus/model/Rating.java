@@ -5,7 +5,6 @@ import android.os.Parcelable;
 
 /**
  * Represents teacher's Rating entity for voting.
- * Created by Administrator on 08.06.2016.
  */
 public class Rating implements Parcelable {
 

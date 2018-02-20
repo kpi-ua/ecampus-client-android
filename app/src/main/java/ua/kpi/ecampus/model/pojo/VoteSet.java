@@ -6,9 +6,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Administrator on 01.06.2016.
- */
 public class VoteSet {
 
     @SerializedName("terms")

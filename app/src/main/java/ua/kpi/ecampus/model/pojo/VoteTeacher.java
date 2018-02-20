@@ -11,9 +11,6 @@ import java.util.List;
 
 import ua.kpi.ecampus.model.Rating;
 
-/**
- * Created by Administrator on 01.06.2016.
- */
 public class VoteTeacher implements Parcelable {
 
     @SerializedName("voteId")

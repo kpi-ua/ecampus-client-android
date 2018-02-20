@@ -11,8 +11,6 @@ import dagger.Provides;
  * This module is going to be added to the graph generated for every activity
  * while the activity
  * creation lifecycle.
- * <p>
- * Created by Administrator on 26.01.2016.
  */
 @Module(
         library = true

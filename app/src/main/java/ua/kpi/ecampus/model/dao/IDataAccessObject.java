@@ -5,8 +5,6 @@ import java.util.Collection;
 /**
  * Provides general interface to the specific data access object of the model.
  * Access to data varies depending on the source of the data.
- * <p>
- * Created by Administrator on 21.03.2016.
  */
 public interface IDataAccessObject<T> {
 
@@ -21,7 +19,6 @@ public interface IDataAccessObject<T> {
      * @param data has to be persisted.
      */
     void setData(Collection<T> data);
-
 
     /**
      * Update specific object.

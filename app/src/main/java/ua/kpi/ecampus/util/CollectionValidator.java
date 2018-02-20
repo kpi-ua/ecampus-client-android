@@ -4,8 +4,6 @@ import java.util.Collection;
 
 /**
  * Contains methods that validate passed data structure from Java collection class.
- *
- * Created by Administrator on 04.02.2016.
  */
 public class CollectionValidator {
 

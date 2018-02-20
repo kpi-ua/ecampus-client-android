@@ -10,9 +10,6 @@ import ua.kpi.ecampus.ui.activity.BulletinContentActivity;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-/**
- * Created by Admin on 17.05.2016.
- */
 public class BulletinContentPresenterTest {
 
     private BulletinContentPresenter mPresenter;

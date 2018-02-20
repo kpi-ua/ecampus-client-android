@@ -51,14 +51,14 @@ public interface BulletinService {
             @Header("Authorization") String authorization,
             @Path("bulletinId") String bulletinId);
 
+    @GET("/roles")
+    Observable<List<Item>> getRoles();
+
     @GET("/subdivision/{subdivisionId}/children")
     Observable<List<Item>> getDescendantSubdivisions(
             @Path("subdivisionId") String subdivisionId);
 
-    @GET("/roles")
-    Observable<List<Item>> getRoles();
-
     @GET("/subdivision/{subdivisionId}/group")
-    Observable<List<Item>> getGroupsIn(@Path("subdivisionId") String
-                                               subdivisionId);
+    Observable<List<Item>> getGroupsIn(
+            @Path("subdivisionId") String subdivisionId);
 }

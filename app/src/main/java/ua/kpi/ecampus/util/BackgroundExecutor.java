@@ -11,8 +11,6 @@ import rx.schedulers.Schedulers;
 
 /**
  * Global Executor for background tasks
- *
- * Created by Administrator on 21.03.2016.
  */
 public class BackgroundExecutor {
     private static final int CPU_COUNT = Runtime.getRuntime().availableProcessors();

@@ -9,9 +9,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-/**
- * Created by Administrator on 19.05.2016.
- */
 public class CollectionValidatorTest {
 
     @Test

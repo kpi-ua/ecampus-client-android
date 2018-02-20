@@ -131,7 +131,6 @@ public class BulletinBoardActivityTest {
         intended(hasComponent(hasShortClassName(SHORT_CLASS_NAME_BULLETIN_CONTENT)));
     }
 
-
     /**
      * Tests that clicking on navigate up button shows parent activity
      * @throws PerformException if currently displayed activity is root activity, since pressing back

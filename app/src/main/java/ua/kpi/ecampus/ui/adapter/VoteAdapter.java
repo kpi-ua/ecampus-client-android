@@ -21,12 +21,10 @@ import static ua.kpi.ecampus.util.TermPredicates.filter;
 import static ua.kpi.ecampus.util.TermPredicates.isMatchesId;
 
 /**
- * VotingAdapter manages VoteTeacher data model and adapts it to
- * RecyclerView, which is in VotingStudentActivity.
- * <p>
- * Created by Administrator on 01.06.2016.
+ * VoteAdapter manages VoteTeacher data model and adapts it to
+ * RecyclerView, which is in VoteStudentActivity.
  */
-public class VotingAdapter extends RecyclerView.Adapter<VotingAdapter.ViewHolder> {
+public class VoteAdapter extends RecyclerView.Adapter<VoteAdapter.ViewHolder> {
 
     private OnItemClickListener mListener;
     private List<VoteTeacher> mAllData = new ArrayList<>();
@@ -72,14 +70,14 @@ public class VotingAdapter extends RecyclerView.Adapter<VotingAdapter.ViewHolder
     }
 
     @Override
-    public VotingAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public VoteAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout
                 .recyclerview_vote_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(VotingAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(VoteAdapter.ViewHolder holder, int position) {
         VoteTeacher teacher = getItem(position);
         holder.tvTeacherName.setText(teacher.getTeacherName());
         if (!teacher.isVoted())

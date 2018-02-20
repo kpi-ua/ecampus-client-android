@@ -21,9 +21,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-/**
- * Created by Administrator on 19.05.2016.
- */
 public class BulletinServiceTest extends BaseServiceTest {
 
     private MockWebServer server;

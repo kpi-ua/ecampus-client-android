@@ -25,9 +25,6 @@ import static org.powermock.api.mockito.PowerMockito.doReturn;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 import static org.powermock.api.support.SuppressCode.suppressConstructor;
 
-/**
- * Created by Admin on 18.05.2016.
- */
 public class SaveBulletinPresenterTest {
 
     private SaveBulletinPresenter mPresenter;

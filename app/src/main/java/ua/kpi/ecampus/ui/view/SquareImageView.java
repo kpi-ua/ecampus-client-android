@@ -2,14 +2,13 @@ package ua.kpi.ecampus.ui.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.support.v7.widget.AppCompatImageView;
 import android.widget.ImageView;
 
 /**
  * Custom imageView with square layout.
- *
- * Created by Administrator on 01.02.2016.
  */
-public class SquareImageView extends ImageView {
+public class SquareImageView extends AppCompatImageView {
     public SquareImageView(Context context)
     {
         super(context);
