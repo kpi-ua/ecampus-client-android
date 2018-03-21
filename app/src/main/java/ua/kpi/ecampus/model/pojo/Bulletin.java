@@ -15,55 +15,23 @@ import java.util.List;
  */
 public class Bulletin implements Parcelable {
 
-    @SerializedName("id")
-    @Expose
-    private String id;
-    @SerializedName("subject")
-    @Expose
-    private String subject;
-    @SerializedName("text")
-    @Expose
-    private String text;
-    @SerializedName("creatorId")
-    @Expose
-    private String creatorId;
-    @SerializedName("creatorName")
-    @Expose
-    private String creatorName;
-    @SerializedName("profileId")
-    @Expose
-    private int profileId;
-    @SerializedName("profileName")
-    @Expose
-    private String profileName;
-    @SerializedName("subdivisionId")
-    @Expose
-    private int subdivisionId;
-    @SerializedName("subdivisionName")
-    @Expose
-    private String subdivisionName;
-    @SerializedName("studyGroupId")
-    @Expose
-    private int studyGroupId;
-    @SerializedName("studyGroupName")
-    @Expose
-    private String studyGroupName;
-    @SerializedName("dateCreate")
-    @Expose
-    private String dateCreate;
-    @SerializedName("dateStart")
-    @Expose
-    private String dateStart;
-    @SerializedName("dateStop")
-    @Expose
-    private String dateStop;
-    @SerializedName("actuality")
-    @Expose
-    private boolean actuality;
+    @SerializedName("id") @Expose private String id;
+    @SerializedName("subject") @Expose private String subject;
+    @SerializedName("text") @Expose private String text;
+    @SerializedName("creatorId") @Expose private String creatorId;
+    @SerializedName("creatorName") @Expose private String creatorName;
+    @SerializedName("profileId") @Expose private int profileId;
+    @SerializedName("profileName") @Expose private String profileName;
+    @SerializedName("subdivisionId") @Expose private int subdivisionId;
+    @SerializedName("subdivisionName") @Expose private String subdivisionName;
+    @SerializedName("studyGroupId") @Expose private String studyGroupId;
+    @SerializedName("studyGroupName") @Expose private String studyGroupName;
+    @SerializedName("dateCreate") @Expose private String dateCreate;
+    @SerializedName("dateStart") @Expose private String dateStart;
+    @SerializedName("dateStop") @Expose private String dateStop;
+    @SerializedName("actuality") @Expose private boolean actuality;
     @SerializedName("recipient")
-    @Expose
-
-    private List<Recipient> recipientList = new ArrayList<>();
+    @Expose private List<Recipient> recipientList = new ArrayList<>();
 
     public Bulletin(String userId, String subject, String text, String
             dateCreate, String dateStart, String dateStop, boolean actuality,
@@ -312,11 +280,11 @@ public class Bulletin implements Parcelable {
         this.subdivisionId = subdivisionId;
     }
 
-    public int getstudyGroupId() {
+    public String getstudyGroupId() {
         return studyGroupId;
     }
 
-    public void setstudyGroupId(int studyGroupId) {
+    public void setstudyGroupId(String studyGroupId) {
         this.studyGroupId = studyGroupId;
     }
 
