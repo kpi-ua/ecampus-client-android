@@ -9,12 +9,8 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Item {
 
-    @SerializedName("id")
-    @Expose
-    private Integer id;
-    @SerializedName("name")
-    @Expose
-    private String name;
+    @SerializedName("id") @Expose private Integer id;
+    @SerializedName("name") @Expose private String name;
 
     public Item(int id, String name) {
         this.id = id;

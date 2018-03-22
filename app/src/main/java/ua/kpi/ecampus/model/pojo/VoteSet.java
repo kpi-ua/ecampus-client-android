@@ -8,12 +8,8 @@ import java.util.List;
 
 public class VoteSet {
 
-    @SerializedName("terms")
-    @Expose
-    private List<VoteTerm> mTerms = new ArrayList<>();
-    @SerializedName("teachers")
-    @Expose
-    private List<VoteTeacher> mTeachers = new ArrayList<>();
+    @SerializedName("terms") @Expose private List<VoteTerm> mTerms = new ArrayList<>();
+    @SerializedName("teachers") @Expose private List<VoteTeacher> mTeachers = new ArrayList<>();
 
     public List<VoteTerm> getTerms() {
         return mTerms;

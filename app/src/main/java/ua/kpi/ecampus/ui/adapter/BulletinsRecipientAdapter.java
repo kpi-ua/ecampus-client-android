@@ -98,7 +98,6 @@ public class BulletinsRecipientAdapter extends RecyclerView
             notifyItemRemoved(position);
             notifyItemRangeChanged(position, mDataList.size());
         }, NOTIFY_DELAY);
-
     }
 
     protected class ViewHolder extends RecyclerView.ViewHolder {

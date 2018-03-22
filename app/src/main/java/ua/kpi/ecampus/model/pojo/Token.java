@@ -8,11 +8,8 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Token {
 
-    @SerializedName("access_token")
-    private String mAccessToken;
-
-    @SerializedName("expires_in")
-    private int expiresIn;
+    @SerializedName("access_token") private String mAccessToken;
+    @SerializedName("expires_in") private int expiresIn;
 
     public Token() {
     }
