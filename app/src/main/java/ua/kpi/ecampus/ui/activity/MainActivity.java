@@ -10,6 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.GridView;
 
+import ua.kpi.ecampus.R;
 import ua.kpi.ecampus.di.UIModule;
 import ua.kpi.ecampus.model.Subsystem;
 import ua.kpi.ecampus.ui.adapter.GridSubsystemAdapter;
@@ -20,24 +21,22 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Main activity for application.
  */
 public class MainActivity extends BaseActivity implements MainPresenter.IView {
 
-    @Bind(ua.kpi.ecampus.R.id.toolbar)
-    Toolbar mToolbar;
-    @Bind(ua.kpi.ecampus.R.id.grid_view_subsystem)
-    GridView mGridSubsystem;
+    @BindView(R.id.toolbar) Toolbar mToolbar;
+    @BindView(R.id.grid_view_subsystem) GridView mGridSubsystem;
     @Inject
     MainPresenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(ua.kpi.ecampus.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         bindViews();
         mPresenter.setView(this);
         mPresenter.initializeViewComponent();
@@ -59,16 +58,16 @@ public class MainActivity extends BaseActivity implements MainPresenter.IView {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(ua.kpi.ecampus.R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case ua.kpi.ecampus.R.id.action_logout:
+            case R.id.action_logout:
                 showLogoutDialog();
-            case ua.kpi.ecampus.R.id.action_settings:
+            case R.id.action_settings:
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -76,15 +75,15 @@ public class MainActivity extends BaseActivity implements MainPresenter.IView {
 
     private void showLogoutDialog() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage(ua.kpi.ecampus.R.string.logout_confirmation);
-        alertDialogBuilder.setPositiveButton(ua.kpi.ecampus.R.string.yes, new
+        alertDialogBuilder.setMessage(R.string.logout_confirmation);
+        alertDialogBuilder.setPositiveButton(R.string.yes, new
                 DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 mPresenter.logout();
             }
         });
-        alertDialogBuilder.setNegativeButton(ua.kpi.ecampus.R.string.no, new DialogInterface
+        alertDialogBuilder.setNegativeButton(R.string.no, new DialogInterface
                 .OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -94,7 +93,6 @@ public class MainActivity extends BaseActivity implements MainPresenter.IView {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
-
 
     @Override
     public void setViewComponent() {
@@ -130,6 +128,6 @@ public class MainActivity extends BaseActivity implements MainPresenter.IView {
         //getSupportActionBar().setHomeButtonEnabled(true);
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
         //mToolbar.setNavigationIcon(R.mipmap.ic_action_menu);
-        getSupportActionBar().setTitle(ua.kpi.ecampus.R.string.activity_name_main);
+        //getSupportActionBar().setTitle(R.string.activity_name_main);
     }
 }

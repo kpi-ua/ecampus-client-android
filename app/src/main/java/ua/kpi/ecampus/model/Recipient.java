@@ -5,34 +5,15 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Represent Recipient of bulletin entity.
- * <p>
- * Created by Administrator on 25.02.2016.
  */
 public class Recipient {
 
-    @SerializedName("subdivisionId")
-    @Expose
-    private String subdivisionId;
-
-    @SerializedName("subdivisionName")
-    @Expose
-    private String subdivisionName;
-
-    @SerializedName("profileId")
-    @Expose
-    private String profileId;
-
-    @SerializedName("profileName")
-    @Expose
-    private String profileName;
-
-    @SerializedName("studyGroupId")
-    @Expose
-    private String studyGroupId;
-
-    @SerializedName("studyGroupName")
-    @Expose
-    private String studyGroupName;
+    @SerializedName("subdivisionId") @Expose private String subdivisionId;
+    @SerializedName("subdivisionName") @Expose private String subdivisionName;
+    @SerializedName("profileId") @Expose private String profileId;
+    @SerializedName("profileName") @Expose private String profileName;
+    @SerializedName("studyGroupId") @Expose private String studyGroupId;
+    @SerializedName("studyGroupName") @Expose private String studyGroupName;
 
     public Recipient() {
     }
@@ -83,7 +64,7 @@ public class Recipient {
         if (studyGroupId != null ? !studyGroupId.equals(recipient.studyGroupId) : recipient.studyGroupId != null)
             return false;
         return !(studyGroupName != null ? !studyGroupName.equals(recipient.studyGroupName) : recipient.studyGroupName != null);
-
+        //return true;//test
     }
 
     @Override

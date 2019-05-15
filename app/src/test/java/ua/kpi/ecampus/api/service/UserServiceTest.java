@@ -15,9 +15,6 @@ import ua.kpi.ecampus.model.pojo.User;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- * Created by Admin on 18.05.2016.
- */
 public class UserServiceTest extends BaseServiceTest {
 
     private MockWebServer server;

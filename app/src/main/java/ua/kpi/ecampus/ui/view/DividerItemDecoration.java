@@ -9,10 +9,8 @@ import android.view.View;
 
 import ua.kpi.ecampus.R;
 
-
 /**
  * DividerItemDecoration draws dividers between recyclerview items.
- * Created by Administrator on 08.06.2016.
  */
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 

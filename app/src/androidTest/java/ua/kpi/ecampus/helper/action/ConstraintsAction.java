@@ -8,7 +8,6 @@ import org.hamcrest.Matcher;
 
 /**
  * Impose conditions on the implementation of actions.
- * Created by Administrator on 11.03.2016.
  */
 public class ConstraintsAction {
 

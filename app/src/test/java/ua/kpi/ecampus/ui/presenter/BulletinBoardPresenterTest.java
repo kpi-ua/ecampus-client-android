@@ -20,9 +20,6 @@ import static junit.framework.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-/**
- * Created by Admin on 17.05.2016.
- */
 public class BulletinBoardPresenterTest {
 
     private BulletinBoardPresenter mPresenter;

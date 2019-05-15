@@ -20,7 +20,6 @@ import java.util.List;
 
 /**
  * Activity for edition of a Bulletin.
- * Created by Administrator on 22.04.2016.
  */
 public class EditBulletinActivity extends SaveBulletinActivity implements
         SaveBulletinPresenter.IView {
@@ -142,8 +141,7 @@ public class EditBulletinActivity extends SaveBulletinActivity implements
             tv.setText(R.string.yes);
         else
             tv.setText(R.string.no);
-        tv = findViewById(R.id
-                .text_view_change_actuality_date_value);
+        tv = findViewById(R.id.text_view_change_actuality_date_value);
         tv.setText(mCurrentBulletin.getDateCreate());
         tv = findViewById(R.id.text_view_author_name);
         tv.setText(User.getInstance().name);

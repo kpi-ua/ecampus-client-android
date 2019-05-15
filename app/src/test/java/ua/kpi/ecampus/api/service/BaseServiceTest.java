@@ -4,7 +4,6 @@ import org.junit.Before;
 
 /**
  * Base class for tests of service classes
- * Created by Admin on 18.05.2016.
  */
 public class BaseServiceTest {
 

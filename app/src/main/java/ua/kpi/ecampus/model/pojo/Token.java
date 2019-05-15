@@ -5,16 +5,11 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Represents Token entity.
  * POJO class for convenient GSON serialization.
- * <p>
- * Created by Administrator on 08.02.2016.
  */
 public class Token {
 
-    @SerializedName("access_token")
-    private String mAccessToken;
-
-    @SerializedName("expires_in")
-    private int expiresIn;
+    @SerializedName("access_token") private String mAccessToken;
+    @SerializedName("expires_in") private int expiresIn;
 
     public Token() {
     }

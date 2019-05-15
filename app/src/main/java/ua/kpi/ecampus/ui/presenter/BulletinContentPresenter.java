@@ -4,8 +4,6 @@ import javax.inject.Inject;
 
 /**
  * BulletinContentPresenter created to manage BulletinContentActivity.
- *
- * Created by Administrator on 04.02.2016.
  */
 public class BulletinContentPresenter extends BasePresenter {
 

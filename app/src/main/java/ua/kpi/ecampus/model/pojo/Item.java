@@ -6,17 +6,11 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Represents Item basic entity which used in requests.
  * POJO class for convenient GSON serialization.
- * <p>
- * Created by Administrator on 04.04.2016.
  */
 public class Item {
 
-    @SerializedName("id")
-    @Expose
-    private Integer id;
-    @SerializedName("name")
-    @Expose
-    private String name;
+    @SerializedName("id") @Expose private Integer id;
+    @SerializedName("name") @Expose private String name;
 
     public Item(int id, String name) {
         this.id = id;

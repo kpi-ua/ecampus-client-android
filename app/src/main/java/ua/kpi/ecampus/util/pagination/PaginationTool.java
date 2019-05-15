@@ -16,9 +16,6 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.Subscriptions;
 
-/**
- * Created by Administrator on 21.03.2016.
- */
 public class PaginationTool<T> {
 
     // for first start of items loading then on RecyclerView there are not

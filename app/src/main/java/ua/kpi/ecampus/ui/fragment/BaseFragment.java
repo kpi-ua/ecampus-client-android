@@ -11,14 +11,11 @@ import ua.kpi.ecampus.ui.activity.BaseActivity;
 
 import butterknife.ButterKnife;
 
-
 /**
  * Base fragment created to be extended by every fragment in this application.
  * This class provides
  * dependency injection configuration, ButterKnife Android library configuration
  * and some methods common to every fragment.
- * <p/>
- * Created by Admin on 02.02.2016.
  */
 public abstract class BaseFragment extends Fragment {
 

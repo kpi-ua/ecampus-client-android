@@ -14,8 +14,6 @@ import java.util.List;
 
 /**
  * Represents Token table entity in SQliteDB.
- *
- * Created by Administrator on 09.02.2016.
  */
 public class TokenTable {
 

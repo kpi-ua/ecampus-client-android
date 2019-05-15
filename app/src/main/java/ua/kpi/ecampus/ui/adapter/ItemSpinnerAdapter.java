@@ -13,7 +13,6 @@ import java.util.List;
 
 /**
  * ItemSpinnerAdapter manages Item data model and adapts it to Spinner view.
- * Created by Administrator on 14.04.2016.
  */
 public class ItemSpinnerAdapter extends ArrayAdapter<Item> {
 

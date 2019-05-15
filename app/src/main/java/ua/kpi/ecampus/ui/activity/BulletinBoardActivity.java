@@ -20,7 +20,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
@@ -42,10 +42,10 @@ import ua.kpi.ecampus.util.pagination.PaginationTool;
 public class BulletinBoardActivity extends BaseActivity implements
         BulletinBoardPresenter.IView {
 
-    @Bind(R.id.toolbar) Toolbar mToolbar;
-    @Bind(R.id.tab_layout) TabLayout mTabLayout;
-    @Bind(android.R.id.list) ExtendedRecyclerView mRecyclerView;
-    @Bind(R.id.progress_bar_bulletin) ProgressBar mProgressLoader;
+    @BindView(R.id.toolbar) Toolbar mToolbar;
+    @BindView(R.id.tab_layout) TabLayout mTabLayout;
+    @BindView(android.R.id.list) ExtendedRecyclerView mRecyclerView;
+    @BindView(R.id.progress_bar_bulletin) ProgressBar mProgressLoader;
     @Inject
     BulletinBoardPresenter mPresenter;
     private PagingRecyclerAdapter mAdapter;
@@ -83,18 +83,15 @@ public class BulletinBoardActivity extends BaseActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bulletin_board);
         bindViews();
-
         mPresenter.setView(this);
         mPresenter.initializeViewComponent();
-
         mIsModerator = mPresenter.isModerator();
     }
 
     private OnItemClickListener onItemClickListener =
             new OnItemClickListener() {
                 @Override
-                public void onItemClicked(View view, int position, Object
-                        item) {
+                public void onItemClicked(View view, int position, Object item) {
                     mPresenter.onItemClick(item);
                 }
             };
@@ -108,25 +105,21 @@ public class BulletinBoardActivity extends BaseActivity implements
 
                 @Override
                 public boolean onQueryTextChange(String newText) {
-                    final List<Bulletin> filteredList = mPresenter.filterData
-                            (mBulletins, newText);
+                    final List<Bulletin> filteredList = mPresenter.filterData (mBulletins, newText);
                     mAdapter.setFilter(filteredList);
                     return false;
                 }
             };
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if (mIsModerator) {
-            getMenuInflater().inflate(R.menu.menu_bulletin_board_with_m_icon,
-                    menu);
+            getMenuInflater().inflate(R.menu.menu_bulletin_board_with_m_icon, menu);
         } else {
             getMenuInflater().inflate(R.menu.menu_bulletin_board, menu);
         }
         final MenuItem item = menu.findItem(R.id.action_search);
-        final SearchView searchView = (SearchView) MenuItemCompat
-                .getActionView(item);
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
         searchView.setOnQueryTextListener(onQueryTextChangeListener);
         return true;
     }
@@ -166,8 +159,7 @@ public class BulletinBoardActivity extends BaseActivity implements
                 (TAB_PROFILE, -1)));
         mTabLayout.addTab(mTabLayout.newTab().setIcon(tabIcon.getResourceId
                 (TAB_SUBDIVISION, -1)));
-        mTabLayout.setOnTabSelectedListener(new TabLayout
-                .OnTabSelectedListener() {
+        mTabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 setCurrentTabFragment(tab.getPosition());
@@ -238,10 +230,8 @@ public class BulletinBoardActivity extends BaseActivity implements
         if (mAdapter.isAllItemsLoaded()) {
             return;
         }
-
         setRecyclerViewPagination();
     }
-
     /**
      * RecyclerView pagination
      */
@@ -249,11 +239,9 @@ public class BulletinBoardActivity extends BaseActivity implements
         PaginationTool<List<Bulletin>> paginationTool = PaginationTool
                 .buildPagingObservable(mRecyclerView, lastId -> new
                         BulletinResponseManager().getResponse(lastId, LIMIT))
-                .setLimit(LIMIT)
-                .build();
+                .setLimit(LIMIT).build();
 
-        mPagingSubscription = paginationTool
-                .getPagingObservable()
+        mPagingSubscription = paginationTool.getPagingObservable()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<List<Bulletin>>() {
                     @Override
@@ -275,10 +263,8 @@ public class BulletinBoardActivity extends BaseActivity implements
                     public void onNext(List<Bulletin> items) {
                         IDataAccessObject<Bulletin> dao = mPresenter.getDao();
                         dao.setData(items);
-
                         mBulletins = new ArrayList<>(dao.getData());
                         setViewsVisibility();
-
                         mAdapter.setItems(new ArrayList<>(mBulletins));
                     }
                 });
@@ -291,8 +277,7 @@ public class BulletinBoardActivity extends BaseActivity implements
 
     @Override
     public void onDestroy() {
-        if (mPagingSubscription != null && !mPagingSubscription
-                .isUnsubscribed()) {
+        if (mPagingSubscription != null && !mPagingSubscription.isUnsubscribed()) {
             mPagingSubscription.unsubscribe();
         }
         // for memory leak prevention (RecycleView is not unsubscibed from

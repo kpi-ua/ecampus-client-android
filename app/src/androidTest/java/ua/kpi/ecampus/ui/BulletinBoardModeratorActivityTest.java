@@ -27,7 +27,6 @@ import static ua.kpi.ecampus.helper.matcher.EspressoTestsMatchers.withDrawable;
 
 /**
  * Tests to verify that the behavior of {@link BulletinBoardActivity} is correct.
- * Created by Administrator on 03.03.2016.
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
@@ -67,7 +66,6 @@ public class BulletinBoardModeratorActivityTest {
             // Asserts that the given component class name matches intent sent by the application under test.
             intended(hasComponent(hasShortClassName(SHORT_CLASS_NAME_NEW_BULLETIN)));
     }
-
 
     /**
      * Test that screen is rotated without exceptions on all tabs.

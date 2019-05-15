@@ -16,11 +16,8 @@ import static ua.kpi.ecampus.util.BulletinPredicates.isMatchesSubdivision;
 
 /**
  * Implementation of IDataAccessObject for the Bulletin data model.
- * <p>
- * Created by Administrator on 21.03.2016.
  */
 public class BulletinDao implements IDataAccessObject<Bulletin> {
-
     /**
      * All unique bulletins available for current user
      */
@@ -83,7 +80,6 @@ public class BulletinDao implements IDataAccessObject<Bulletin> {
      * @return list of bulletins.
      */
     public Collection<Bulletin> getFilteredByProfile() {
-
         return mByProfile;
     }
 

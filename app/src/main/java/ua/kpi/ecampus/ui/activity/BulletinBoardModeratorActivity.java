@@ -20,11 +20,12 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
+import ua.kpi.ecampus.R;
 import ua.kpi.ecampus.di.UIModule;
 import ua.kpi.ecampus.model.dao.IDataAccessObject;
 import ua.kpi.ecampus.model.pojo.Bulletin;
@@ -42,14 +43,10 @@ import ua.kpi.ecampus.util.pagination.PaginationTool;
 public class BulletinBoardModeratorActivity extends BaseActivity implements
         BulletinBoardModeratorPresenter.IView {
 
-    @Bind(ua.kpi.ecampus.R.id.toolbar)
-    Toolbar mToolbar;
-    @Bind(ua.kpi.ecampus.R.id.tab_layout)
-    TabLayout mTabLayout;
-    @Bind(android.R.id.list)
-    ExtendedRecyclerView mRecyclerView;
-    @Bind(ua.kpi.ecampus.R.id.progress_bar_bulletin)
-    ProgressBar mProgressLoader;
+    @BindView(R.id.toolbar) Toolbar mToolbar;
+    @BindView(R.id.tab_layout) TabLayout mTabLayout;
+    @BindView(android.R.id.list) ExtendedRecyclerView mRecyclerView;
+    @BindView(R.id.progress_bar_bulletin) ProgressBar mProgressLoader;
     @Inject
     BulletinBoardModeratorPresenter mPresenter;
     private PagingRecyclerAdapter mAdapter;
@@ -82,8 +79,7 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(ua.kpi.ecampus.R.layout
-                .activity_bulletin_board_moderator);
+        setContentView(R.layout.activity_bulletin_board_moderator);
         bindViews();
         mPresenter.setView(this);
         mPresenter.initializeViewComponent();
@@ -103,7 +99,7 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
                 @Override
                 public boolean onMenuItemClick(MenuItem menuItem) {
                     switch (menuItem.getItemId()) {
-                        case ua.kpi.ecampus.R.id.edit:
+                        case R.id.edit:
                             Bulletin b = mAdapter.getClickedItem();
                             mPresenter.onEditMenuClick(b);
                             break;
@@ -130,11 +126,9 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(ua.kpi.ecampus.R.menu.menu_bulletin_board,
-                menu);
-        final MenuItem item = menu.findItem(ua.kpi.ecampus.R.id.action_search);
-        final SearchView searchView = (SearchView) MenuItemCompat
-                .getActionView(item);
+        getMenuInflater().inflate(R.menu.menu_bulletin_board, menu);
+        final MenuItem item = menu.findItem(R.id.action_search);
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
         searchView.setOnQueryTextListener(onQueryTextChangeListener);
         return true;
     }
@@ -167,10 +161,8 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
         setSupportActionBar(mToolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        mToolbar.setNavigationIcon(ua.kpi.ecampus.R.mipmap
-                .ic_action_navigation_arrow_back);
-        getSupportActionBar().setTitle(ua.kpi.ecampus.R.string
-                .activity_bulletin_moderator_mode_title);
+        mToolbar.setNavigationIcon(R.mipmap.ic_action_navigation_arrow_back);
+        getSupportActionBar().setTitle(R.string.activity_bulletin_moderator_mode_title);
     }
 
     private void setTabLayout() {
@@ -226,7 +218,7 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
 
     }
 
-    @OnClick(ua.kpi.ecampus.R.id.fab_add)
+    @OnClick(R.id.fab_add)
     public void fabAddOnClick() {
         mPresenter.onButtonAddClick();
     }
@@ -262,7 +254,6 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
         if (mAdapter.isAllItemsLoaded()) {
             return;
         }
-
         setRecyclerViewPagination();
     }
 
@@ -273,9 +264,7 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
         PaginationTool<List<Bulletin>> paginationTool = PaginationTool
                 .buildPagingObservable(mRecyclerView, lastId -> new
                         BulletinModeratorResponseManager().getResponse
-                        (lastId, LIMIT))
-                .setLimit(LIMIT)
-                .build();
+                        (lastId, LIMIT)).setLimit(LIMIT).build();
 
         mPagingSubscription = paginationTool
                 .getPagingObservable()
@@ -289,8 +278,7 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
                     public void onError(Throwable e) {
                         if (e != null)
                             //Log.e(Config.LOG, e.getMessage());
-                            ToastUtil.showError(getString(ua.kpi.ecampus.R.string
-                                            .error_while_data_obtaining),
+                            ToastUtil.showError(getString(R.string.error_while_data_obtaining),
                                     getApplicationContext());
 
                         setViewsVisibility();
@@ -300,10 +288,8 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
                     public void onNext(List<Bulletin> items) {
                         IDataAccessObject<Bulletin> dao = mPresenter.getDao();
                         dao.setData(items);
-
                         mBulletins = new ArrayList<>(dao.getData());
                         setViewsVisibility();
-
                         mAdapter.setItems(new ArrayList<>(mBulletins));
                     }
                 });
@@ -316,8 +302,7 @@ public class BulletinBoardModeratorActivity extends BaseActivity implements
 
     @Override
     public void onDestroy() {
-        if (mPagingSubscription != null && !mPagingSubscription
-                .isUnsubscribed()) {
+        if (mPagingSubscription != null && !mPagingSubscription.isUnsubscribed()) {
             mPagingSubscription.unsubscribe();
         }
         // for memory leak prevention (RecycleView is not unsubscibed from

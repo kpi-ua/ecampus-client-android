@@ -11,29 +11,14 @@ import java.util.List;
 
 import ua.kpi.ecampus.model.Rating;
 
-/**
- * Created by Administrator on 01.06.2016.
- */
 public class VoteTeacher implements Parcelable {
 
-    @SerializedName("voteId")
-    @Expose
-    private Integer voteId;
-    @SerializedName("teacherId")
-    @Expose
-    private Integer teacherId;
-    @SerializedName("teacherName")
-    @Expose
-    private String teacherName;
-    @SerializedName("isVoted")
-    @Expose
-    private boolean isVoted;
-    @SerializedName("avgResult")
-    @Expose
-    private String avgResult;
-    @SerializedName("criteria")
-    @Expose
-    private List<Rating> criteria = new ArrayList<>();
+    @SerializedName("voteId") @Expose private Integer voteId;
+    @SerializedName("teacherId") @Expose private Integer teacherId;
+    @SerializedName("teacherName") @Expose private String teacherName;
+    @SerializedName("isVoted") @Expose private boolean isVoted;
+    @SerializedName("avgResult") @Expose private String avgResult;
+    @SerializedName("criteria") @Expose private List<Rating> criteria = new ArrayList<>();
 
     public VoteTeacher(Integer voteId, Integer teacherId, String name,
                        boolean isVoted, String result) {

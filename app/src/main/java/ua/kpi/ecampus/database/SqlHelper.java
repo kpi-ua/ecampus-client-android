@@ -9,12 +9,10 @@ import ua.kpi.ecampus.database.table.TokenTable;
 
 /**
  * Manage database creation and version management.
- *
- * Created by Administrator on 09.02.2016.
  */
 public class SqlHelper extends SQLiteOpenHelper {
 
-    public static final String CONTENT_AUTHORITY = "ua.kpi.ecampus.database.contentprovider";
+    public static final String CONTENT_AUTHORITY = ".database.contentprovider";
 
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 

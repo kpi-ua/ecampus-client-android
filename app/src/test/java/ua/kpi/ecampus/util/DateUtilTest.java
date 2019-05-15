@@ -9,9 +9,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 
-/**
- * Created by Administrator on 19.05.2016.
- */
 public class DateUtilTest {
 
     @Test

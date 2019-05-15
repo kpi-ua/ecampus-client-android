@@ -14,11 +14,8 @@ import java.io.IOException;
 import retrofit2.Call;
 import retrofit2.Response;
 
-
 /**
  * Loads Token data.
- * <p>
- * Created by Administrator on 09.02.2016.
  */
 public class TokenLoader extends BaseLoader {
 

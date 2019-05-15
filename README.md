@@ -5,13 +5,17 @@
 <br />
 Campus application for Android powered by api.campus.kpi.ua service
 
-API v2.0 
-* endpoint: http://api-campus-kpi-ua.azurewebsites.net/
-* structure: http://api-campus-kpi-ua.azurewebsites.net/system/structure
+API v2.0 for test
+* endpoint: http://api.ecampus.kpi.ua/
+* swagger: http://api.ecampus.kpi.ua/swagger/ui/index
 
+API v3.0 
+* endpoint: http://api.campus.kpi.ua/
+* swagger: http://api.campus.kpi.ua/swagger/
 
 
 #### Соглашение о сотрудничестве 
+
 Если Вы решили стать частью команды разработчиков, то просим ознакомиться со следующим соглашением, принятым в проекте. 
 
 С целью успешной координации совместной деятельности процесс разработки условно разделен на следующие этапы: 
