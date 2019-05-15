@@ -18,8 +18,7 @@ public class ServiceCreator {
     private static final int WRITE_TIMEOUT = 120;
     private static final int CONNECT_TIMEOUT = 10;
 
-    public static final String API_ENDPOINT =
-            "https://api-campus-kpi-ua.azurewebsites.net";
+    public static final String API_ENDPOINT =  "http://api.ecampus.kpi.ua/";
 
     private static final OkHttpClient.Builder CLIENT = new OkHttpClient
             .Builder();

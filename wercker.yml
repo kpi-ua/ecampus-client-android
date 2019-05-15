@@ -1,4 +1,5 @@
-box: jacekmarchwicki/android:java8-r25
+box: chibatching/docker-android-sdk
+
 # Build definition
 build:
   # The steps that will be executed on build
